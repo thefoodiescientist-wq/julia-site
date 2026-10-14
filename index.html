@@ -17,8 +17,8 @@
 <style>
 /* Layout: a specimen drawer in a loud kitchen. Full-bleed sections alternate deep grounds (royal, forest, navy, tomato); cream only for cards. Single committed look per brand guidelines v2. */
 :root{
-  --royal:#0B3DB5; --tomato:#E8291C; --marigold:#F5B400; --forest:#0E3B2A; --navy:#041634;
-  --cream:#F2EDE3; --tile:#7B8FE8; --leaf:#2EAE3A; --mustard:#F2A93B; --plum:#5B1F5E;
+  --royal:#0B3DB5; --tomato:#E8291C; --marigold:#F5B400; --forest:#3A1240; --navy:#041634;
+  --cream:#F2EDE3; --tile:#7B8FE8; --leaf:#A77BD6; --mustard:#F2A93B; --plum:#5B1F5E;
   --ink:#041634;
   --display:"Playfair Display",Georgia,"Times New Roman",serif;
   --body:"Cabin","Segoe UI",system-ui,sans-serif;
@@ -37,7 +37,7 @@ section{padding-inline:16px;padding-block:72px;position:relative}
 .wrap{max-width:1100px;margin:0 auto;position:relative}
 .dots{background-image:radial-gradient(rgba(242,237,227,.22) 1px,transparent 1.2px);background-size:22px 22px}
 .checker{background-image:linear-gradient(45deg,rgba(242,237,227,.06) 25%,transparent 25%,transparent 75%,rgba(242,237,227,.06) 75%),linear-gradient(45deg,rgba(242,237,227,.06) 25%,transparent 25%,transparent 75%,rgba(242,237,227,.06) 75%);background-size:48px 48px;background-position:0 0,24px 24px}
-.g-royal{background-color:var(--royal)} .g-forest{background-color:var(--forest)} .g-navy{background-color:var(--navy)} .g-tomato{background-color:var(--tomato)}
+.g-royal{background-color:var(--royal)} .g-navy{background-color:var(--navy)} .g-tomato{background-color:var(--tomato)}
 .eyebrow{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-bottom:22px}
 .eyebrow .label{opacity:.85}
 .rule{flex:1;height:1px;background:currentColor;opacity:.35;min-width:40px}
@@ -50,7 +50,7 @@ section{padding-inline:16px;padding-block:72px;position:relative}
 .g-tomato .tag{box-shadow:5px 5px 0 var(--navy)}
 .logo{width:22px;height:22px;display:inline-block;flex:none;object-fit:contain}
 .logo.wide{width:34px}
-.fringe{height:34px;background:repeating-linear-gradient(90deg,var(--marigold) 0 6px,transparent 6px 10px,var(--tomato) 10px 16px,transparent 16px 20px,var(--tile) 20px 26px,transparent 26px 30px);transform-origin:top;animation:sway 3.2s ease-in-out infinite alternate}
+.fringe{height:14px;background:repeating-linear-gradient(90deg,var(--tomato) 0 10px,var(--tile) 10px 20px)}
 @keyframes sway{from{transform:skewX(-3deg)}to{transform:skewX(3deg)}}
 .doodle{position:absolute;pointer-events:none;z-index:0}
 section>.wrap{z-index:1}
@@ -242,10 +242,9 @@ td:first-child{font-weight:600}
 </section>
 <div class="fringe" aria-hidden="true"></div>
 
-<!-- TIMELINE + CARDS · forest -->
-<section class="g-forest checker" id="timeline">
+<!-- TIMELINE + CARDS · navy -->
+<section class="g-navy" id="timeline">
   <div class="wrap">
-    <div class="eyebrow"><span class="label">Field record</span><span class="rule"></span><span class="label">2011 → today</span></div>
     <h2 class="sec-title">Twelve years in <em>six lanes</em></h2>
     <p class="lede">Policy training got stacked on top of a decade in industry, not swapped in for it. Every bar is a link. The cards below are the same stops, newest first.</p>
 
@@ -267,13 +266,13 @@ td:first-child{font-weight:600}
         <a href="https://www.kerryselect.com" target="_blank" rel="noopener"><rect x="888" y="194" width="64" height="58" fill="#7B8FE8" stroke="#F2EDE3" stroke-width="1"/><text x="894" y="213" font-size="9.5" font-weight="700" fill="#041634">KerrySelect</text><text x="894" y="231" font-size="9" fill="#041634">Technical</text><text x="894" y="245" font-size="9" fill="#041634">Product Mgr</text></a>
         <a href="https://www.amazon.com/fresh" target="_blank" rel="noopener"><rect x="952" y="194" width="64" height="58" fill="#7B8FE8" stroke="#F2EDE3" stroke-width="1"/><text x="958" y="213" font-size="9.5" font-weight="700" fill="#041634">Amazon Fresh</text><text x="958" y="231" font-size="9" fill="#041634">Product</text><text x="958" y="245" font-size="9" fill="#041634">Manager</text></a>
         <a href="https://www.amazon.com/fresh" target="_blank" rel="noopener"><rect x="1016" y="266" width="64" height="58" fill="#E8291C" stroke="#F2EDE3" stroke-width="1"/><text x="1022" y="285" font-size="9.5" font-weight="700" fill="#F2EDE3">Amazon Fresh</text><text x="1022" y="303" font-size="9" fill="#F2EDE3">Sourcing</text><text x="1022" y="317" font-size="9" fill="#F2EDE3">Manager</text></a>
-        <a href="https://culinex.biz" target="_blank" rel="noopener"><rect x="696" y="338" width="128" height="58" fill="#2EAE3A" stroke="#F2EDE3" stroke-width="1"/><text x="702" y="357" font-size="10" font-weight="700" fill="#041634">Expanded Access Program</text><text x="702" y="375" font-size="10" fill="#041634">Program Lead</text><text x="702" y="389" font-size="10" fill="#041634">Pro bono development</text></a>
-        <a href="https://www.seattle.gov/seattle-disability-commission/who-we-are" target="_blank" rel="noopener"><rect x="1016" y="338" width="64" height="58" fill="#0E3B2A" stroke="#F2EDE3" stroke-width="1"/><text x="1022" y="357" font-size="9.5" font-weight="700" fill="#F2EDE3">City of Seattle</text><text x="1022" y="375" font-size="9" fill="#F2EDE3">Commissioner</text><text x="1022" y="389" font-size="9" fill="#F2EDE3">Appointed</text></a>
-        <a href="https://policyreformulated.substack.com" target="_blank" rel="noopener"><rect x="1080" y="338" width="64" height="58" fill="#2EAE3A" stroke="#F2EDE3" stroke-width="1"/><text x="1086" y="357" font-size="9.5" font-weight="700" fill="#041634">Policy Ref.</text><text x="1086" y="375" font-size="9" fill="#041634">Policy</text><text x="1086" y="389" font-size="9" fill="#041634">Writer</text></a>
+        <a href="https://culinex.biz" target="_blank" rel="noopener"><rect x="696" y="338" width="128" height="58" fill="#A77BD6" stroke="#F2EDE3" stroke-width="1"/><text x="702" y="357" font-size="10" font-weight="700" fill="#041634">Expanded Access Program</text><text x="702" y="375" font-size="10" fill="#041634">Program Lead</text><text x="702" y="389" font-size="10" fill="#041634">Pro bono development</text></a>
+        <a href="https://www.seattle.gov/seattle-disability-commission/who-we-are" target="_blank" rel="noopener"><rect x="1016" y="338" width="64" height="58" fill="#3A1240" stroke="#F2EDE3" stroke-width="1"/><text x="1022" y="357" font-size="9.5" font-weight="700" fill="#F2EDE3">City of Seattle</text><text x="1022" y="375" font-size="9" fill="#F2EDE3">Commissioner</text><text x="1022" y="389" font-size="9" fill="#F2EDE3">Appointed</text></a>
+        <a href="https://policyreformulated.substack.com" target="_blank" rel="noopener"><rect x="1080" y="338" width="64" height="58" fill="#A77BD6" stroke="#F2EDE3" stroke-width="1"/><text x="1086" y="357" font-size="9.5" font-weight="700" fill="#041634">Policy Ref.</text><text x="1086" y="375" font-size="9" fill="#041634">Policy</text><text x="1086" y="389" font-size="9" fill="#041634">Writer</text></a>
         <a href="https://loopnpd.com" target="_blank" rel="noopener"><rect x="1080" y="410" width="64" height="58" fill="#5B1F5E" stroke="#F2EDE3" stroke-width="1"/><text x="1086" y="429" font-size="9.5" font-weight="700" fill="#F2EDE3">LoopNPD</text><text x="1086" y="447" font-size="9" fill="#F2EDE3">Founder</text><text x="1086" y="461" font-size="9" fill="#F2EDE3"></text></a>
         <line x1="1144" y1="40" x2="1144" y2="478" stroke="#E8291C" stroke-width="2" stroke-dasharray="4 4"/><text x="1144" y="494" class="mono" font-size="10" text-anchor="middle" fill="#E8291C">TODAY</text></svg>
       </div>
-      <div class="legend"><span><i style="background:#0B3DB5"></i>Education</span><span><i style="background:#F5B400"></i>Bench R&amp;D</span><span><i style="background:#7B8FE8"></i>Product management</span><span><i style="background:#E8291C"></i>Sourcing</span><span><i style="background:#2EAE3A"></i>Policy</span><span><i style="background:#5B1F5E"></i>Founder</span></div>
+      <div class="legend"><span><i style="background:#0B3DB5"></i>Education</span><span><i style="background:#F5B400"></i>Bench R&amp;D</span><span><i style="background:#7B8FE8"></i>Product management</span><span><i style="background:#E8291C"></i>Sourcing</span><span><i style="background:#A77BD6"></i>Policy</span><span><i style="background:#5B1F5E"></i>Founder</span></div>
     </figure>
 
     <div class="deal">
@@ -296,11 +295,40 @@ td:first-child{font-weight:600}
 </section>
 <div class="fringe" aria-hidden="true"></div>
 
+<!-- POLICY WORK · plum -->
+<section class="g-plum" id="policy">
+  <div class="wrap">
+    <h2 class="sec-title">Policy <em>work</em></h2>
+    <p class="lede">Rules I have worked under, programs I have designed, and markets I have opened. Then the graduate research behind them.</p>
+    <div class="deal">
+      <article class="card c-forest"><img class="photo" src="img/seattle.jpg" alt=""><div class="body"><span class="head"><span class="label">Civic</span></span><h3><a href="https://www.seattle.gov/seattle-disability-commission/who-we-are" target="_blank" rel="noopener">Annual Commission work plan</a></h3><p>One of 21 commissioners appointed by the Mayor and Council. Co-authored the work plan that sets the priorities Council legislates against: transportation equity, accessible infrastructure, emergency preparedness, ADA compliance.</p><span class="label" style="opacity:.7">Seattle Disability Commission · 2025–26</span><a class="go" href="https://www.seattle.gov/seattle-disability-commission/who-we-are" target="_blank" rel="noopener">Open →</a></div></article>
+      <article class="card c-tomato"><img class="photo" src="img/pol-regulatory.jpg" alt=""><div class="body"><span class="head"><span class="label">Regulatory</span></span><h3>FDA and USDA regulatory work</h3><p>Built retail and foodservice labels, ingredient statements and allergen declarations. Managed compliance across the product lifecycle at Amazon, led supplier food safety audits across 202 products and two recall responses.</p><span class="label" style="opacity:.7">High Liner Foods, Amazon Fresh · 2017–26</span></div></article>
+      <article class="card c-leaf"><img class="photo" src="img/eap.jpg" alt=""><div class="body"><span class="head"><span class="label">Program design</span></span><h3><a href="https://culinex.biz" target="_blank" rel="noopener">Expanded Access Program</a></h3><p>Designed and launched a pro bono development program for BIPOC food entrepreneurs: nearly $50,000 in services in year one, renewed for a second year.</p><span class="label" style="opacity:.7">CuliNEX · 2020–22</span><a class="go" href="https://culinex.biz" target="_blank" rel="noopener">Open →</a></div></article>
+      <article class="card c-marigold"><img class="photo" src="img/pol-snap.jpg" alt=""><div class="body"><span class="head"><span class="label">Policy proposal</span></span><h3>Nutrition guidance platform for SNAP households</h3><p>A proposal engaging SNAP benefit structures, SNAP-Ed, GusNIP, EFNEP and USDA SBIR/STTR funding, with regulatory risk assessed across FDA, HIPAA and CMS food-as-medicine frameworks.</p><span class="label" style="opacity:.7">2026</span></div></article>
+      <article class="card c-royal"><img class="photo" src="img/pol-blueberry.jpg" alt=""><div class="body"><span class="head"><span class="label">Agricultural trade</span></span><h3><a href="docs/ushbc-ingredient-comparison-2023.pdf" target="_blank" rel="noopener">Taking U.S. blueberries overseas</a></h3><p>Built and ran the Council’s international samples and technical communications program from scratch, connecting manufacturers in Asia with U.S. growers. Contributed to 50 new products in India and a children’s supplement in Malaysia. Presented at Asia Fruit Logistica, Bangkok.</p><span class="label" style="opacity:.7">U.S. Highbush Blueberry Council · 2021–23</span><a class="go" href="docs/ushbc-ingredient-comparison-2023.pdf" target="_blank" rel="noopener">Open →</a></div></article>
+    </div>
+    <div class="eyebrow" style="margin-top:64px"><span class="label">Graduate research</span><span class="rule"></span><span class="label">Eight papers · LSE Master of Public Administration</span></div>
+    <h3 class="sec-title" style="font-size:clamp(28px,4vw,40px)">What I <em>studied</em></h3>
+    <p class="lede">Each paper opens as a PDF.</p>
+    <div class="deal">
+      <article class="card c-tomato"><img class="photo" src="img/essay-econ.jpg" alt="First page of the essay"><div class="body"><span class="head"><span class="label">Nutrition labeling</span></span><h3><a href="docs/essay-econ.pdf" target="_blank" rel="noopener">Front-of-package labels as a market failure</a></h3><p>Economic policy analysis of asymmetric information between manufacturers and shoppers, and what labeling rules can and cannot fix.</p><span class="label" style="opacity:.7">LSE · April 2025</span><a class="go" href="docs/essay-econ.pdf" target="_blank" rel="noopener">Read the paper →</a></div></article>
+      <article class="card c-tomato"><img class="photo" src="img/essay-fop.jpg" alt="First page of the essay"><div class="body"><span class="head"><span class="label">Nutrition labeling</span></span><h3><a href="docs/essay-fop.pdf" target="_blank" rel="noopener">Who wins the labeling fight</a></h3><p>Politicians, bureaucrats and interest groups in the FDA front-of-pack rule, and whose preferences become policy.</p><span class="label" style="opacity:.7">LSE · November 2024</span><a class="go" href="docs/essay-fop.pdf" target="_blank" rel="noopener">Read the paper →</a></div></article>
+      <article class="card c-marigold"><img class="photo" src="img/essay-snap.jpg" alt="First page of the essay"><div class="body"><span class="head"><span class="label">SNAP adequacy</span></span><h3><a href="docs/essay-snap.pdf" target="_blank" rel="noopener">SNAP and the Healthy SNAP Act</a></h3><p>Empirical methods applied to benefit adequacy and the proposal to restrict what SNAP can buy.</p><span class="label" style="opacity:.7">LSE · January 2025</span><a class="go" href="docs/essay-snap.pdf" target="_blank" rel="noopener">Read the paper →</a></div></article>
+      <article class="card c-plum"><img class="photo" src="img/essay-meat.jpg" alt="First page of the essay"><div class="body"><span class="head"><span class="label">Meat consolidation</span></span><h3><a href="docs/essay-meat.pdf" target="_blank" rel="noopener">Why policy problems persist</a></h3><p>A century of price-fixing cases against meat processors and why regulation keeps failing to stick.</p><span class="label" style="opacity:.7">LSE · 2024</span><a class="go" href="docs/essay-meat.pdf" target="_blank" rel="noopener">Read the paper →</a></div></article>
+      <article class="card c-leaf"><img class="photo" src="img/essay-citizenship.jpg" alt="First page of the essay"><div class="body"><span class="head"><span class="label">H-2A agricultural labor</span></span><h3><a href="docs/essay-citizenship.pdf" target="_blank" rel="noopener">A citizenship path for farmworkers</a></h3><p>Policy proposal for the non-citizen workforce that harvests the American food supply.</p><span class="label" style="opacity:.7">LSE · May 2025</span><a class="go" href="docs/essay-citizenship.pdf" target="_blank" rel="noopener">Read the paper →</a></div></article>
+      <article class="card c-royal"><img class="photo" src="img/essay-devecon.jpg" alt="First page of the essay"><div class="body"><span class="head"><span class="label">Development economics</span></span><h3><a href="docs/essay-devecon.pdf" target="_blank" rel="noopener">Food manufacturing as an economic ladder</a></h3><p>Can advanced food manufacturing still drive structural change in developing economies?</p><span class="label" style="opacity:.7">LSE · 2025</span><a class="go" href="docs/essay-devecon.pdf" target="_blank" rel="noopener">Read the paper →</a></div></article>
+      <article class="card c-tile"><img class="photo" src="img/essay-reg.jpg" alt="First page of the essay"><div class="body"><span class="head"><span class="label">Regulatory analysis</span></span><h3><a href="docs/essay-reg.pdf" target="_blank" rel="noopener">Two regulatory regimes for cannabis</a></h3><p>Federal prohibition versus Washington State’s regulated market, and how each regime shapes outcomes.</p><span class="label" style="opacity:.7">LSE · 2026</span><a class="go" href="docs/essay-reg.pdf" target="_blank" rel="noopener">Read the paper →</a></div></article>
+      <article class="card c-royal"><img class="photo" src="img/essay-ai.jpg" alt="First page of the essay"><div class="body"><span class="head"><span class="label">Technology policy</span></span><h3><a href="docs/essay-ai.pdf" target="_blank" rel="noopener">UK AI through technology transfers</a></h3><p>How the UK can grow AI capacity without quadrupling data-center energy demand.</p><span class="label" style="opacity:.7">LSE · 2026</span><a class="go" href="docs/essay-ai.pdf" target="_blank" rel="noopener">Read the paper →</a></div></article>
+    </div>
+  </div>
+</section>
+<div class="fringe" aria-hidden="true"></div>
+
 <!-- MY WORK · navy, horizontal scroll -->
 <section class="workscroll" id="work" data-count="10">
   <div class="ws-sticky">
     <div class="ws-head">
-      <div class="eyebrow"><span class="label">Products I developed</span><span class="rule"></span><span class="label ws-count">1 / 10</span></div>
+      <div class="eyebrow"><span class="rule"></span><span class="label ws-count">1 / 10</span></div>
       <h2 class="sec-title">R&amp;D <em>Portfolio</em></h2>
     </div>
     <div class="ws-track">
@@ -320,9 +348,8 @@ td:first-child{font-weight:600}
 <div class="fringe" aria-hidden="true"></div>
 
 <!-- THE LOOP · royal -->
-<section class="g-royal dots">
+<section class="g-royal">
   <div class="wrap">
-    <div class="eyebrow"><span class="label">Why my background matters</span><span class="rule"></span><span class="label">Figure</span></div>
     <h2 class="sec-title">The loop I have worked <em>every stage</em> of</h2>
     <p class="lede">A rule gets written, a company responds, a product lands on a shelf, someone eats it. Most policy analysts have sat in one of these boxes. The red label on each card is the job I did there.</p>
     <div class="loop">
@@ -335,10 +362,9 @@ td:first-child{font-weight:600}
   </div>
 </section>
 
-<!-- CONVERGENCE · forest -->
-<section class="g-forest">
+<!-- CONVERGENCE · navy -->
+<section class="g-navy">
   <div class="wrap">
-    <div class="eyebrow"><span class="label">Thesis</span><span class="rule"></span><span class="label">Figure</span></div>
     <h2 class="sec-title">Three vantage points, <em>one analyst</em></h2>
     <p class="lede">I know how a rule gets written, and <span class="wavy">how a company will respond to it</span>.</p>
     <figure class="panel" style="margin-top:34px">
@@ -377,9 +403,8 @@ td:first-child{font-weight:600}
 <div class="fringe" aria-hidden="true"></div>
 
 <!-- LOOPNPD · tomato -->
-<section class="g-tomato dots" id="loopnpd">
+<section class="g-tomato" id="loopnpd">
   <div class="wrap">
-    <div class="eyebrow"><span class="label">Product</span><span class="rule"></span><span class="label">loopnpd.com</span></div>
     <h2 class="sec-title">What I'm <span class="wavy">building</span></h2>
     <div class="product">
       <div class="copy">
@@ -399,9 +424,8 @@ td:first-child{font-weight:600}
 </section>
 
 <!-- POLICY REFORMULATED · plum -->
-<section class="g-plum dots" id="policy-reformulated">
+<section class="g-plum" id="policy-reformulated">
   <div class="wrap">
-    <div class="eyebrow"><span class="label">Publication</span><span class="rule"></span><span class="label">policyreformulated.substack.com</span></div>
     <h2 class="sec-title">What I'm <em>writing</em></h2>
     <div class="product">
       <div class="copy">
@@ -424,40 +448,10 @@ td:first-child{font-weight:600}
 <div class="fringe" aria-hidden="true"></div>
 
 
-<!-- POLICY WORK · forest -->
-<section class="g-forest checker" id="policy">
-  <div class="wrap">
-    <div class="eyebrow"><span class="label">Policy in practice</span><span class="rule"></span><span class="label">Five programs</span></div>
-    <h2 class="sec-title">Policy <em>work</em></h2>
-    <p class="lede">Rules I have worked under, programs I have designed, and markets I have opened. Then the graduate research behind them.</p>
-    <div class="deal">
-      <article class="card c-forest"><img class="photo" src="img/seattle.jpg" alt=""><div class="body"><span class="head"><span class="label">Civic</span></span><h3><a href="https://www.seattle.gov/seattle-disability-commission/who-we-are" target="_blank" rel="noopener">Annual Commission work plan</a></h3><p>One of 21 commissioners appointed by the Mayor and Council. Co-authored the work plan that sets the priorities Council legislates against: transportation equity, accessible infrastructure, emergency preparedness, ADA compliance.</p><span class="label" style="opacity:.7">Seattle Disability Commission · 2025–26</span><a class="go" href="https://www.seattle.gov/seattle-disability-commission/who-we-are" target="_blank" rel="noopener">Open →</a></div></article>
-      <article class="card c-tomato"><img class="photo" src="img/pol-regulatory.jpg" alt=""><div class="body"><span class="head"><span class="label">Regulatory</span></span><h3>FDA and USDA regulatory work</h3><p>Built retail and foodservice labels, ingredient statements and allergen declarations. Managed compliance across the product lifecycle at Amazon, led supplier food safety audits across 202 products and two recall responses.</p><span class="label" style="opacity:.7">High Liner Foods, Amazon Fresh · 2017–26</span></div></article>
-      <article class="card c-leaf"><img class="photo" src="img/eap.jpg" alt=""><div class="body"><span class="head"><span class="label">Program design</span></span><h3><a href="https://culinex.biz" target="_blank" rel="noopener">Expanded Access Program</a></h3><p>Designed and launched a pro bono development program for BIPOC food entrepreneurs: nearly $50,000 in services in year one, renewed for a second year.</p><span class="label" style="opacity:.7">CuliNEX · 2020–22</span><a class="go" href="https://culinex.biz" target="_blank" rel="noopener">Open →</a></div></article>
-      <article class="card c-marigold"><img class="photo" src="img/pol-snap.jpg" alt=""><div class="body"><span class="head"><span class="label">Policy proposal</span></span><h3>Nutrition guidance platform for SNAP households</h3><p>A proposal engaging SNAP benefit structures, SNAP-Ed, GusNIP, EFNEP and USDA SBIR/STTR funding, with regulatory risk assessed across FDA, HIPAA and CMS food-as-medicine frameworks.</p><span class="label" style="opacity:.7">2026</span></div></article>
-      <article class="card c-royal"><img class="photo" src="img/pol-blueberry.jpg" alt=""><div class="body"><span class="head"><span class="label">Agricultural trade</span></span><h3><a href="docs/ushbc-ingredient-comparison-2023.pdf" target="_blank" rel="noopener">Taking U.S. blueberries overseas</a></h3><p>Built and ran the Council’s international samples and technical communications program from scratch, connecting manufacturers in Asia with U.S. growers. Contributed to 50 new products in India and a children’s supplement in Malaysia. Presented at Asia Fruit Logistica, Bangkok.</p><span class="label" style="opacity:.7">U.S. Highbush Blueberry Council · 2021–23</span><a class="go" href="docs/ushbc-ingredient-comparison-2023.pdf" target="_blank" rel="noopener">Open →</a></div></article>
-    </div>
-    <div class="eyebrow" style="margin-top:64px"><span class="label">Graduate research</span><span class="rule"></span><span class="label">Eight papers · LSE Master of Public Administration</span></div>
-    <h3 class="sec-title" style="font-size:clamp(28px,4vw,40px)">What I <em>studied</em></h3>
-    <p class="lede">Each paper opens as a PDF.</p>
-    <div class="deal">
-      <article class="card c-tomato"><img class="photo" src="img/essay-econ.jpg" alt="First page of the essay"><div class="body"><span class="head"><span class="label">Nutrition labeling</span></span><h3><a href="docs/essay-econ.pdf" target="_blank" rel="noopener">Front-of-package labels as a market failure</a></h3><p>Economic policy analysis of asymmetric information between manufacturers and shoppers, and what labeling rules can and cannot fix.</p><span class="label" style="opacity:.7">LSE · April 2025</span><a class="go" href="docs/essay-econ.pdf" target="_blank" rel="noopener">Read the paper →</a></div></article>
-      <article class="card c-tomato"><img class="photo" src="img/essay-fop.jpg" alt="First page of the essay"><div class="body"><span class="head"><span class="label">Nutrition labeling</span></span><h3><a href="docs/essay-fop.pdf" target="_blank" rel="noopener">Who wins the labeling fight</a></h3><p>Politicians, bureaucrats and interest groups in the FDA front-of-pack rule, and whose preferences become policy.</p><span class="label" style="opacity:.7">LSE · November 2024</span><a class="go" href="docs/essay-fop.pdf" target="_blank" rel="noopener">Read the paper →</a></div></article>
-      <article class="card c-marigold"><img class="photo" src="img/essay-snap.jpg" alt="First page of the essay"><div class="body"><span class="head"><span class="label">SNAP adequacy</span></span><h3><a href="docs/essay-snap.pdf" target="_blank" rel="noopener">SNAP and the Healthy SNAP Act</a></h3><p>Empirical methods applied to benefit adequacy and the proposal to restrict what SNAP can buy.</p><span class="label" style="opacity:.7">LSE · January 2025</span><a class="go" href="docs/essay-snap.pdf" target="_blank" rel="noopener">Read the paper →</a></div></article>
-      <article class="card c-plum"><img class="photo" src="img/essay-meat.jpg" alt="First page of the essay"><div class="body"><span class="head"><span class="label">Meat consolidation</span></span><h3><a href="docs/essay-meat.pdf" target="_blank" rel="noopener">Why policy problems persist</a></h3><p>A century of price-fixing cases against meat processors and why regulation keeps failing to stick.</p><span class="label" style="opacity:.7">LSE · 2024</span><a class="go" href="docs/essay-meat.pdf" target="_blank" rel="noopener">Read the paper →</a></div></article>
-      <article class="card c-leaf"><img class="photo" src="img/essay-citizenship.jpg" alt="First page of the essay"><div class="body"><span class="head"><span class="label">H-2A agricultural labor</span></span><h3><a href="docs/essay-citizenship.pdf" target="_blank" rel="noopener">A citizenship path for farmworkers</a></h3><p>Policy proposal for the non-citizen workforce that harvests the American food supply.</p><span class="label" style="opacity:.7">LSE · May 2025</span><a class="go" href="docs/essay-citizenship.pdf" target="_blank" rel="noopener">Read the paper →</a></div></article>
-      <article class="card c-royal"><img class="photo" src="img/essay-devecon.jpg" alt="First page of the essay"><div class="body"><span class="head"><span class="label">Development economics</span></span><h3><a href="docs/essay-devecon.pdf" target="_blank" rel="noopener">Food manufacturing as an economic ladder</a></h3><p>Can advanced food manufacturing still drive structural change in developing economies?</p><span class="label" style="opacity:.7">LSE · 2025</span><a class="go" href="docs/essay-devecon.pdf" target="_blank" rel="noopener">Read the paper →</a></div></article>
-      <article class="card c-tile"><img class="photo" src="img/essay-reg.jpg" alt="First page of the essay"><div class="body"><span class="head"><span class="label">Regulatory analysis</span></span><h3><a href="docs/essay-reg.pdf" target="_blank" rel="noopener">Two regulatory regimes for cannabis</a></h3><p>Federal prohibition versus Washington State’s regulated market, and how each regime shapes outcomes.</p><span class="label" style="opacity:.7">LSE · 2026</span><a class="go" href="docs/essay-reg.pdf" target="_blank" rel="noopener">Read the paper →</a></div></article>
-      <article class="card c-royal"><img class="photo" src="img/essay-ai.jpg" alt="First page of the essay"><div class="body"><span class="head"><span class="label">Technology policy</span></span><h3><a href="docs/essay-ai.pdf" target="_blank" rel="noopener">UK AI through technology transfers</a></h3><p>How the UK can grow AI capacity without quadrupling data-center energy demand.</p><span class="label" style="opacity:.7">LSE · 2026</span><a class="go" href="docs/essay-ai.pdf" target="_blank" rel="noopener">Read the paper →</a></div></article>
-    </div>
-  </div>
-</section>
-<div class="fringe" aria-hidden="true"></div>
 
 <!-- CAPABILITY GRID · navy -->
-<section class="g-navy dots">
+<section class="g-navy">
   <div class="wrap">
-    <div class="eyebrow"><span class="label">Assay results</span><span class="rule"></span><span class="label">Seven capabilities</span></div>
     <h2 class="sec-title">Where each capability was <em>proven</em></h2>
     <p class="lede">Seven capabilities, three settings.</p>
     <div class="panel" style="margin-top:34px">
@@ -481,9 +475,8 @@ td:first-child{font-weight:600}
 </section>
 <div class="fringe" aria-hidden="true"></div>
 <!-- NUMBERS · tomato -->
-<section class="g-tomato dots">
+<section class="g-tomato">
   <div class="wrap">
-    <div class="eyebrow"><span class="label">Measurements</span><span class="rule"></span><span class="label">From the record</span></div>
     <h2 class="sec-title">By the <span class="wavy">numbers</span></h2>
     <div class="panel" style="margin-top:34px">
       <ul class="figures">
@@ -501,7 +494,6 @@ td:first-child{font-weight:600}
 <!-- CONTACT · tomato -->
 <section class="g-tomato contact">
   <div class="wrap">
-    <div class="eyebrow"><span class="label">Contact</span><span class="rule"></span><span class="label">Seattle, WA</span></div>
     <h2 class="sec-title">Connect with <span class="wavy">Julia</span></h2>
     <div style="display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center">
       <div style="display:grid;gap:18px">
