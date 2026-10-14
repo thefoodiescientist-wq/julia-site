@@ -44,8 +44,8 @@ section{padding-inline:16px;padding-block:72px;position:relative}
 .sec-title{font-size:clamp(34px,5vw,56px);margin-bottom:12px}
 .sec-title em{font-style:italic;color:var(--marigold)}
 .lede{max-width:62ch;font-size:19px;opacity:.92}
-.wavy{text-decoration:underline wavy var(--tomato);text-decoration-thickness:3px;text-underline-offset:6px}
-.g-tomato .wavy{text-decoration-color:var(--marigold)}
+.wavy{text-decoration:none;background:linear-gradient(transparent 60%,rgba(245,180,0,.6) 60%,rgba(245,180,0,.6) 90%,transparent 90%);padding:0 .1em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.g-tomato .wavy{background:linear-gradient(transparent 60%,rgba(4,22,52,.45) 60%,rgba(4,22,52,.45) 90%,transparent 90%)}
 .tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:6px 10px;border:2px solid currentColor;box-shadow:5px 5px 0 var(--tomato)}
 .g-tomato .tag{box-shadow:5px 5px 0 var(--navy)}
 .logo{width:22px;height:22px;display:inline-block;flex:none;object-fit:contain}
@@ -107,10 +107,10 @@ figcaption{font-size:14px;max-width:70ch}
 .card.c-leaf .head,.card.c-marigold .head{color:var(--forest)}
 .card h3{font-size:19px;line-height:1.15}
 .card h3 a{text-decoration:none}
-.card h3 a:hover{text-decoration:underline wavy var(--tomato);text-decoration-thickness:2px;text-underline-offset:4px}
+.card h3 a:hover{text-decoration:underline solid var(--royal);text-decoration-thickness:2px;text-underline-offset:4px}
 .card p{font-size:14px;opacity:.85}
 .card .go{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--royal);text-decoration:none;margin-top:6px}
-.card .go:hover{text-decoration:underline wavy var(--tomato)}
+.card .go:hover{text-decoration:underline solid currentColor;text-underline-offset:3px}
 .c-royal{--c:var(--royal)} .c-tomato{--c:var(--tomato)} .c-marigold{--c:var(--marigold)} .c-forest{--c:var(--forest)} .c-plum{--c:var(--plum)} .c-leaf{--c:var(--leaf)} .c-tile{--c:var(--tile)}
 
 /* work belt */
@@ -153,7 +153,7 @@ figcaption{font-size:14px;max-width:70ch}
 .practice .panel h3{font-size:24px}
 .practice .panel .label{color:var(--royal)}
 .practice .go{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--royal);text-decoration:none}
-.practice .go:hover{text-decoration:underline wavy var(--tomato)}
+.practice .go:hover{text-decoration:underline solid currentColor;text-underline-offset:3px}
 @media (max-width:760px){.practice{grid-template-columns:1fr}}
 /* loop */
 .loop{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px;align-items:start}
