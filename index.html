@@ -212,6 +212,13 @@ th.c,td.c{text-align:center;width:96px}
 .g-plum .tag{box-shadow:5px 5px 0 var(--marigold)}
 .g-plum .btn,.g-tomato .btn{border-color:var(--cream)}
 @media (max-width:820px){.product{grid-template-columns:1fr}}
+.clip{margin:6px 0 0;max-width:420px;background:var(--cream);padding:8px;box-shadow:8px 8px 0 var(--navy)}
+.clip video,.vbox video{width:100%;height:auto;display:block;border:1px solid rgba(4,22,52,.25)}
+.clip figcaption{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 2px 0;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+.clip button,.vbox button{font:inherit;color:var(--ink);background:none;border:2px solid var(--ink);padding:5px 9px;cursor:pointer;text-transform:uppercase;letter-spacing:.06em}
+.vbox{width:min(1200px,94vw);max-width:none;padding:10px;border:0;background:var(--cream);box-shadow:12px 12px 0 var(--navy)}
+.vbox::backdrop{background:rgba(4,22,52,.85)}
+.vbox button{display:block;margin:0 0 10px auto;font-family:var(--mono);font-size:11px}
 td:first-child{font-weight:600}
 
 /* contact */
@@ -483,6 +490,10 @@ section[id]{scroll-margin-top:0}
         <p class="lede" style="font-size:17px">Built from the problem I lived for twelve years: developers find ingredient solutions slowly because technical sales support sits outside the R&amp;D process. LoopNPD puts it inside.</p>
         <div class="chips"><span class="chip">Stage-gate</span><span class="chip">Formulation management</span><span class="chip">Nutrition facts</span><span class="chip">Technical data sheets</span><span class="chip">Triangle tests</span><span class="chip">Ingredient marketplace</span><span class="chip">Millie AI</span></div>
         <div><a class="btn" href="https://loopnpd.com" target="_blank" rel="noopener">Launch app →</a></div>
+        <figure class="clip">
+          <video src="vid/millie-intro.mp4" poster="vid/millie-intro-poster.jpg" width="1920" height="1080" controls playsinline preload="metadata" aria-label="Two-minute introduction to LoopNPD and Millie AI: a reduced-sugar granola fails its pilot test and Millie finds the fix"></video>
+          <figcaption><span>Meet Millie AI · 2 min</span><button type="button" class="grow" aria-label="Watch the video larger">Watch larger ⤢</button></figcaption>
+        </figure>
       </div>
       <div class="shot">
         <img src="img/loop-dashboard.jpg" alt="LoopNPD dashboard with a needs-attention alert, active products and formulations">
@@ -626,6 +637,19 @@ section[id]{scroll-margin-top:0}
   }
   window.addEventListener('scroll',function(){requestAnimationFrame(pick);},{passive:true});
   pick();
+})();
+
+// Millie video: "Watch larger" moves the same <video> into a modal, so playback carries over.
+(function(){
+  var fig=document.querySelector('.clip'); if(!fig)return;
+  var v=fig.querySelector('video'), grow=fig.querySelector('.grow');
+  if(!window.HTMLDialogElement){grow.onclick=function(){(v.requestFullscreen||v.webkitEnterFullscreen).call(v);};return;}
+  var dlg=document.createElement('dialog'); dlg.className='vbox'; dlg.setAttribute('aria-label','Meet Millie AI video');
+  dlg.innerHTML='<button type="button">Close ✕</button>'; document.body.appendChild(dlg);
+  dlg.querySelector('button').onclick=function(){dlg.close();};
+  dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close();});
+  dlg.addEventListener('close',function(){fig.insertBefore(v,fig.firstChild);grow.focus();});
+  grow.onclick=function(){var playing=!v.paused;dlg.appendChild(v);dlg.showModal();if(playing)v.play();};
 })();
 </script>
 
