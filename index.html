@@ -219,10 +219,24 @@ td:first-child{font-weight:600}
 .contact .wrap{display:grid;gap:22px}
 .coords{display:flex;flex-wrap:wrap;gap:18px 32px}
 .coords .label{opacity:.9}
+
+html{scroll-behavior:smooth}
+section[id]{scroll-margin-top:0}
+.toc{position:fixed;left:18px;top:50%;transform:translateY(-50%);z-index:500;background:rgba(4,22,52,.82);backdrop-filter:blur(6px);border:2px solid rgba(242,237,227,.25);padding:14px 16px;box-shadow:6px 6px 0 var(--tomato)}
+.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.toc a{display:flex;align-items:center;gap:10px;color:var(--cream);text-decoration:none;font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;opacity:.7;transition:opacity .2s,color .2s}
+.toc a:hover{opacity:1}
+.toc-dot{width:8px;height:8px;border:2px solid currentColor;border-radius:50%;flex:none}
+.toc a.active{opacity:1;color:var(--marigold)}
+.toc a.active .toc-dot{background:currentColor}
+@media (max-width:1519px){.toc{padding:12px 10px;left:12px}.toc-text{display:none}.toc:hover .toc-text,.toc:focus-within .toc-text{display:inline}}
+@media (min-width:761px) and (max-width:1239px){section{padding-left:64px}}
+@media (max-width:760px){.toc{display:none}}
 </style>
 
+<nav class="toc" aria-label="Sections"><ol><li><a href="#top"><span class="toc-dot"></span><span class="toc-text">Intro</span></a></li><li><a href="#timeline"><span class="toc-dot"></span><span class="toc-text">Career timeline</span></a></li><li><a href="#vantage"><span class="toc-dot"></span><span class="toc-text">Three vantage points</span></a></li><li><a href="#capabilities"><span class="toc-dot"></span><span class="toc-text">Capabilities</span></a></li><li><a href="#policy"><span class="toc-dot"></span><span class="toc-text">Policy work</span></a></li><li><a href="#work"><span class="toc-dot"></span><span class="toc-text">R&amp;D Portfolio</span></a></li><li><a href="#loop"><span class="toc-dot"></span><span class="toc-text">The loop</span></a></li><li><a href="#loopnpd"><span class="toc-dot"></span><span class="toc-text">LoopNPD</span></a></li><li><a href="#policy-reformulated"><span class="toc-dot"></span><span class="toc-text">Policy Reformulated</span></a></li><li><a href="#numbers"><span class="toc-dot"></span><span class="toc-text">By the numbers</span></a></li><li><a href="#contact"><span class="toc-dot"></span><span class="toc-text">Contact</span></a></li></ol></nav>
 <!-- HERO -->
-<section class="hero g-royal dots">
+<section class="hero g-royal dots" id="top">
   <div class="wrap">
     <div>
       <p class="label">Food scientist · policy analyst · Seattle, WA</p>
@@ -292,6 +306,72 @@ td:first-child{font-weight:600}
 </section>
 <div class="fringe" aria-hidden="true"></div>
 
+<!-- CONVERGENCE · royal -->
+<section class="g-royal" id="vantage">
+  <div class="wrap">
+    <h2 class="sec-title">Three vantage points, <em>one analyst</em></h2>
+    <p class="lede">I know how a rule gets written, and <span class="wavy">how a company will respond to it</span>.</p>
+    <figure class="panel" style="margin-top:34px">
+      <div class="panel-top"><span class="label">What each experience contributes</span></div>
+      <div class="scroll">
+      <svg class="fig" viewBox="0 0 900 300" role="img" aria-label="Bench formulation, national retail sourcing and city government each feed into one outcome: policy analysis that predicts the industry response." style="min-width:640px">
+        <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#E8291C"/></marker></defs>
+        <g fill="#F2EDE3" stroke="#041634" stroke-width="1.5">
+          <rect x="20" y="20" width="330" height="78"/><rect x="20" y="111" width="330" height="78"/><rect x="20" y="202" width="330" height="78"/>
+        </g>
+        <rect x="608" y="108" width="280" height="100" fill="#E8291C"/>
+        <rect x="600" y="100" width="280" height="100" fill="#F5B400" stroke="#041634" stroke-width="1.5"/><image href="img/lse-logo.svg" x="620" y="170" width="24" height="24"/>
+        <g font-size="15" font-weight="700" fill="#041634" font-family="Playfair Display,serif">
+          <text x="34" y="44">The bench</text><text x="34" y="135">National retail business</text><text x="34" y="226">City government</text>
+          <text x="620" y="138">Policy analysis that predicts</text><text x="620" y="158">the industry response</text>
+        </g>
+        <g font-size="12" fill="#041634" font-style="italic">
+          <text x="34" y="64">how a product actually gets made</text>
+          <text x="34" y="155">how a business weighs cost, margin and risk</text>
+          <text x="34" y="246">how a rule gets written and passed</text>
+        </g>
+        <g font-size="10" fill="#041634" class="mono">
+          <text x="34" y="84">FORMULATION · LABELING · STAGE-GATE R&amp;D</text>
+          <text x="34" y="175">RFPS · $2M SAVINGS · P&amp;L · SUPPLIER AUDITS · 202 SKUS</text>
+          <text x="34" y="266">APPOINTED COMMISSIONER · COUNCIL WORK PLAN</text>
+          <text x="650" y="181">MASTER OF PUBLIC ADMINISTRATION</text><text x="650" y="194">2026</text>
+        </g>
+        <g stroke="#E8291C" stroke-width="3" fill="none" stroke-linecap="round" marker-end="url(#arr)">
+          <path d="M350 59 C 480 59, 480 150, 596 150"/><path d="M350 150 L 596 150"/><path d="M350 241 C 480 241, 480 150, 596 150"/>
+        </g>
+      </svg>
+      </div>
+    </figure>
+  </div>
+</section>
+<div class="fringe" aria-hidden="true"></div>
+
+<!-- CAPABILITY GRID · navy -->
+<section class="g-navy" id="capabilities">
+  <div class="wrap">
+    <h2 class="sec-title">Where each capability was <em>proven</em></h2>
+    <p class="lede">Seven capabilities, three settings.</p>
+    <div class="panel" style="margin-top:34px">
+      <div class="panel-top"><span class="label">Capability by setting</span><span class="key"><span><i class="dot"></i> Led it there</span><span><i class="dot half"></i> Contributed</span><span><i class="dot none"></i> Not claimed</span></span></div>
+      <div class="scroll">
+      <table>
+        <thead><tr><th>Capability</th><th class="c">Bench</th><th class="c">Retail scale</th><th class="c">Government</th><th>Evidence</th></tr></thead>
+        <tbody>
+          <tr><td>Regulatory analysis (FDA, USDA)</td><td class="c"><i class="dot"></i></td><td class="c"><i class="dot"></i></td><td class="c"><i class="dot"></i></td><td>Labels at High Liner; compliance lifecycle at Amazon; labeling policy research at LSE</td></tr>
+          <tr><td>Cost and trade-off analysis</td><td class="c"><i class="dot"></i></td><td class="c"><i class="dot"></i></td><td class="c"><i class="dot half"></i></td><td>$50K ingredient optimization; $2M sourcing shift; SNAP adequacy research</td></tr>
+          <tr><td>Supply chain impact analysis</td><td class="c"><i class="dot half"></i></td><td class="c"><i class="dot"></i></td><td class="c"></td><td>Supplier qualification criteria; two recall responses</td></tr>
+          <tr><td>Stakeholder engagement</td><td class="c"><i class="dot"></i></td><td class="c"><i class="dot"></i></td><td class="c"><i class="dot"></i></td><td>Blueberry Council international program; cross-functional remediation; Commission work plan</td></tr>
+          <tr><td>Program design</td><td class="c"><i class="dot"></i></td><td class="c"><i class="dot half"></i></td><td class="c"><i class="dot"></i></td><td>Expanded Access Program; team restructure proposal; SNAP nutrition platform proposal</td></tr>
+          <tr><td>Data analysis and automation</td><td class="c"><i class="dot"></i></td><td class="c"><i class="dot"></i></td><td class="c"><i class="dot half"></i></td><td>Trial design, sensory and shelf-life data at every bench; Python and AI tools at Amazon; 49 legacy defects cleared; elasticity modeling</td></tr>
+          <tr><td>Technical research authorship</td><td class="c"><i class="dot"></i></td><td class="c"><i class="dot"></i></td><td class="c"><i class="dot"></i></td><td>11-method blueberry study; programming research behind the Amazon analytics tools; policy papers on labeling and meat consolidation</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="fringe" aria-hidden="true"></div>
+
 <!-- POLICY WORK · plum -->
 <section class="g-plum" id="policy">
   <div class="wrap">
@@ -345,7 +425,7 @@ td:first-child{font-weight:600}
 <div class="fringe" aria-hidden="true"></div>
 
 <!-- THE LOOP · royal -->
-<section class="g-royal">
+<section class="g-royal" id="loop">
   <div class="wrap">
     <h2 class="sec-title">The loop I have worked <em>every stage</em> of</h2>
     <p class="lede">A rule gets written, a company responds, a product lands on a shelf, someone eats it. Most policy analysts have sat in one of these boxes. I've sat in all of them.</p>
@@ -358,46 +438,6 @@ td:first-child{font-weight:600}
     <div class="loop-back"><svg viewBox="0 0 120 40" aria-hidden="true"><path d="M115 20 C 90 5, 60 35, 5 20 M14 12 L4 20 L14 28" fill="none" stroke="#F5B400" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="label">evidence feeds the next rule</span></div>
   </div>
 </section>
-
-<!-- CONVERGENCE · navy -->
-<section class="g-navy">
-  <div class="wrap">
-    <h2 class="sec-title">Three vantage points, <em>one analyst</em></h2>
-    <p class="lede">I know how a rule gets written, and <span class="wavy">how a company will respond to it</span>.</p>
-    <figure class="panel" style="margin-top:34px">
-      <div class="panel-top"><span class="label">What each experience contributes</span></div>
-      <div class="scroll">
-      <svg class="fig" viewBox="0 0 900 300" role="img" aria-label="Bench formulation, national retail sourcing and city government each feed into one outcome: policy analysis that predicts the industry response." style="min-width:640px">
-        <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#E8291C"/></marker></defs>
-        <g fill="#F2EDE3" stroke="#041634" stroke-width="1.5">
-          <rect x="20" y="20" width="330" height="78"/><rect x="20" y="111" width="330" height="78"/><rect x="20" y="202" width="330" height="78"/>
-        </g>
-        <rect x="608" y="108" width="280" height="100" fill="#E8291C"/>
-        <rect x="600" y="100" width="280" height="100" fill="#F5B400" stroke="#041634" stroke-width="1.5"/><image href="img/lse-logo.svg" x="620" y="170" width="24" height="24"/>
-        <g font-size="15" font-weight="700" fill="#041634" font-family="Playfair Display,serif">
-          <text x="34" y="44">The bench</text><text x="34" y="135">National retail business</text><text x="34" y="226">City government</text>
-          <text x="620" y="138">Policy analysis that predicts</text><text x="620" y="158">the industry response</text>
-        </g>
-        <g font-size="12" fill="#041634" font-style="italic">
-          <text x="34" y="64">how a product actually gets made</text>
-          <text x="34" y="155">how a business weighs cost, margin and risk</text>
-          <text x="34" y="246">how a rule gets written and passed</text>
-        </g>
-        <g font-size="10" fill="#041634" class="mono">
-          <text x="34" y="84">FORMULATION · LABELING · STAGE-GATE R&amp;D</text>
-          <text x="34" y="175">RFPS · $2M SAVINGS · P&amp;L · SUPPLIER AUDITS · 202 SKUS</text>
-          <text x="34" y="266">APPOINTED COMMISSIONER · COUNCIL WORK PLAN</text>
-          <text x="650" y="181">MASTER OF PUBLIC ADMINISTRATION</text><text x="650" y="194">2026</text>
-        </g>
-        <g stroke="#E8291C" stroke-width="3" fill="none" stroke-linecap="round" marker-end="url(#arr)">
-          <path d="M350 59 C 480 59, 480 150, 596 150"/><path d="M350 150 L 596 150"/><path d="M350 241 C 480 241, 480 150, 596 150"/>
-        </g>
-      </svg>
-      </div>
-    </figure>
-  </div>
-</section>
-<div class="fringe" aria-hidden="true"></div>
 
 <!-- LOOPNPD · tomato -->
 <section class="g-tomato" id="loopnpd">
@@ -446,33 +486,8 @@ td:first-child{font-weight:600}
 
 
 
-<!-- CAPABILITY GRID · navy -->
-<section class="g-navy">
-  <div class="wrap">
-    <h2 class="sec-title">Where each capability was <em>proven</em></h2>
-    <p class="lede">Seven capabilities, three settings.</p>
-    <div class="panel" style="margin-top:34px">
-      <div class="panel-top"><span class="label">Capability by setting</span><span class="key"><span><i class="dot"></i> Led it there</span><span><i class="dot half"></i> Contributed</span><span><i class="dot none"></i> Not claimed</span></span></div>
-      <div class="scroll">
-      <table>
-        <thead><tr><th>Capability</th><th class="c">Bench</th><th class="c">Retail scale</th><th class="c">Government</th><th>Evidence</th></tr></thead>
-        <tbody>
-          <tr><td>Regulatory analysis (FDA, USDA)</td><td class="c"><i class="dot"></i></td><td class="c"><i class="dot"></i></td><td class="c"><i class="dot"></i></td><td>Labels at High Liner; compliance lifecycle at Amazon; labeling policy research at LSE</td></tr>
-          <tr><td>Cost and trade-off analysis</td><td class="c"><i class="dot"></i></td><td class="c"><i class="dot"></i></td><td class="c"><i class="dot half"></i></td><td>$50K ingredient optimization; $2M sourcing shift; SNAP adequacy research</td></tr>
-          <tr><td>Supply chain impact analysis</td><td class="c"><i class="dot half"></i></td><td class="c"><i class="dot"></i></td><td class="c"></td><td>Supplier qualification criteria; two recall responses</td></tr>
-          <tr><td>Stakeholder engagement</td><td class="c"><i class="dot"></i></td><td class="c"><i class="dot"></i></td><td class="c"><i class="dot"></i></td><td>Blueberry Council international program; cross-functional remediation; Commission work plan</td></tr>
-          <tr><td>Program design</td><td class="c"><i class="dot"></i></td><td class="c"><i class="dot half"></i></td><td class="c"><i class="dot"></i></td><td>Expanded Access Program; team restructure proposal; SNAP nutrition platform proposal</td></tr>
-          <tr><td>Data analysis and automation</td><td class="c"><i class="dot"></i></td><td class="c"><i class="dot"></i></td><td class="c"><i class="dot half"></i></td><td>Trial design, sensory and shelf-life data at every bench; Python and AI tools at Amazon; 49 legacy defects cleared; elasticity modeling</td></tr>
-          <tr><td>Technical research authorship</td><td class="c"><i class="dot"></i></td><td class="c"><i class="dot"></i></td><td class="c"><i class="dot"></i></td><td>11-method blueberry study; programming research behind the Amazon analytics tools; policy papers on labeling and meat consolidation</td></tr>
-        </tbody>
-      </table>
-      </div>
-    </div>
-  </div>
-</section>
-<div class="fringe" aria-hidden="true"></div>
 <!-- NUMBERS · tomato -->
-<section class="g-tomato">
+<section class="g-tomato" id="numbers">
   <div class="wrap">
     <h2 class="sec-title">By the <span class="wavy">numbers</span></h2>
     <div class="panel" style="margin-top:34px">
@@ -489,7 +504,7 @@ td:first-child{font-weight:600}
 </section>
 
 <!-- CONTACT · tomato -->
-<section class="g-tomato contact">
+<section class="g-tomato contact" id="contact">
   <div class="wrap">
     <h2 class="sec-title">Connect with <span class="wavy">Julia</span></h2>
     <div style="display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center">
@@ -563,6 +578,20 @@ td:first-child{font-weight:600}
   track.addEventListener('click',function(e){if(moved){e.preventDefault();moved=false;}},true);
   track.addEventListener('scroll',function(){requestAnimationFrame(update);},{passive:true});
   window.addEventListener('resize',update); update();
+})();
+
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.toc a'));
+  var map={}; links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  var secs=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));}).filter(Boolean);
+  function pick(){
+    var y=window.innerHeight*0.35, cur=secs[0];
+    secs.forEach(function(s){if(s.getBoundingClientRect().top<=y)cur=s;});
+    links.forEach(function(a){a.classList.remove('active');});
+    if(cur&&map[cur.id])map[cur.id].classList.add('active');
+  }
+  window.addEventListener('scroll',function(){requestAnimationFrame(pick);},{passive:true});
+  pick();
 })();
 </script>
 
