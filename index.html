@@ -149,13 +149,8 @@ figcaption{font-size:14px;max-width:70ch}
 .ws .cap span{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;opacity:.8}
 .ws .cap p{font-size:15px;opacity:.9;max-width:52ch}
 .ws:hover img,.ws:hover video{transform:translate(-3px,-3px);box-shadow:14px 14px 0 var(--tomato)}
-.ws-sub{max-width:60ch;opacity:.85;margin:10px 0 0;font-size:16px}
 .ws-count{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;opacity:.8}
-.ws-nav{display:flex;gap:10px;margin-left:auto}
-.ws-nav button{font-family:var(--mono);font-size:14px;background:transparent;color:var(--cream);border:2px solid var(--cream);width:40px;height:40px;cursor:pointer;box-shadow:4px 4px 0 var(--tomato)}
-.ws-nav button:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--tomato)}
-.ws-nav button:disabled{opacity:.35;cursor:default;transform:none;box-shadow:none}
-@media (max-width:700px){.ws:nth-child(n){transform:none}.ws-track{gap:16px;padding:16px 16px 24px;scroll-snap-type:x mandatory}.ws{width:82vw;scroll-snap-align:start}.ws-nav{display:none}}
+@media (max-width:700px){.ws:nth-child(n){transform:none}.ws-track{gap:16px;padding:16px 16px 24px;scroll-snap-type:x mandatory}.ws{width:82vw;scroll-snap-align:start}}
 .practice{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:44px}
 .practice .panel{display:grid;gap:10px;align-content:start}
 .practice .panel h3{font-size:24px}
@@ -307,9 +302,8 @@ td:first-child{font-weight:600}
 <section class="workscroll" id="work" data-count="10">
   <div class="ws-sticky">
     <div class="ws-head">
-      <div class="eyebrow"><span class="label">Product portfolio</span><span class="rule"></span><span class="label ws-count">1 / 10</span><span class="ws-nav"><button type="button" class="ws-prev" aria-label="Previous product">&larr;</button><button type="button" class="ws-next" aria-label="Next product">&rarr;</button></span></div>
-      <h2 class="sec-title">My <em>work</em></h2>
-      <p class="ws-sub">Products I have formulated, launched or sourced. Scroll sideways over the cards, drag, or use the arrows.</p>
+      <div class="eyebrow"><span class="label">Products I developed</span><span class="rule"></span><span class="label ws-count">1 / 10</span></div>
+      <h2 class="sec-title">R&amp;D <em>Portfolio</em></h2>
     </div>
     <div class="ws-track">
       <a class="ws" href="https://www.highlinerfoods.com" target="_blank" rel="noopener"><img src="img/ws-seacuisine.jpg" alt=""><span class="cap"><span>High Liner Foods · 2018</span><b>Sea Cuisine clean-label line</b><p>Salmon, cod and tilapia. Bench to shelf for Walmart and Kroger, labels and child-nutrition compliance included.</p></span></a>
@@ -540,14 +534,11 @@ td:first-child{font-weight:600}
 (function(){
   var sec=document.querySelector('.workscroll'); if(!sec)return;
   var track=sec.querySelector('.ws-track'); var count=sec.querySelector('.ws-count');
-  var prev=sec.querySelector('.ws-prev'), next=sec.querySelector('.ws-next');
   var cards=[].slice.call(track.querySelectorAll('.ws')); var n=cards.length;
-  function step(){return cards.length>1?cards[1].offsetLeft-cards[0].offsetLeft:track.clientWidth*.8;}
   function update(){
     var max=track.scrollWidth-track.clientWidth;
     var idx=max>0?Math.round(track.scrollLeft/max*(n-1))+1:1;
     count.textContent=idx+' / '+n;
-    prev.disabled=track.scrollLeft<=2; next.disabled=track.scrollLeft>=max-2;
   }
   // wheel over the cards scrolls sideways; at either end the page scrolls normally
   track.addEventListener('wheel',function(e){
@@ -557,8 +548,6 @@ td:first-child{font-weight:600}
     if(atStart||atEnd)return;
     e.preventDefault(); track.scrollLeft+=e.deltaY;
   },{passive:false});
-  prev.addEventListener('click',function(){track.scrollBy({left:-step(),behavior:'smooth'});});
-  next.addEventListener('click',function(){track.scrollBy({left:step(),behavior:'smooth'});});
   // click-and-drag with the mouse
   var down=false,sx=0,sl=0,moved=false;
   track.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;down=true;moved=false;sx=e.clientX;sl=track.scrollLeft;});
