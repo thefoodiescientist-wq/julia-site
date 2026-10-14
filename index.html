@@ -13,7 +13,7 @@
 <meta property="og:image" content="https://julia.loopnpd.com/img/headshot.jpg">
 
 <title>Julia Thompson | Food Scientist and Policy Analyst</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Cabin:wght@400;600&family=JetBrains+Mono:wght@600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Cabin:wght@400;600&family=Inter:wght@500;600&display=swap">
 <style>
 /* Layout: a specimen drawer in a loud kitchen. Full-bleed sections alternate deep grounds (royal, forest, navy, tomato); cream only for cards. Single committed look per brand guidelines v2. */
 :root{
@@ -22,7 +22,7 @@
   --ink:#041634;
   --display:"Playfair Display",Georgia,"Times New Roman",serif;
   --body:"Cabin","Segoe UI",system-ui,sans-serif;
-  --mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+  --mono:"Inter","Segoe UI",system-ui,sans-serif;
   color-scheme:dark;
 }
 *{box-sizing:border-box}
@@ -233,12 +233,17 @@ section[id]{scroll-margin-top:0}
 @media (min-width:761px) and (max-width:1239px){section{padding-left:64px}}
 @media (max-width:760px){.toc{display:none}}
 
-.xp{margin-top:44px;border-top:2px solid rgba(242,237,227,.3);border-bottom:2px solid rgba(242,237,227,.3)}
-.xp>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:14px;padding:18px 0;font-family:var(--display);font-weight:900;font-size:clamp(24px,3vw,34px);color:var(--cream)}
+.xp{margin-top:44px}
+.xp>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:14px;padding:9px 12px 9px 14px;margin:0;font-family:var(--display);font-weight:900;font-size:clamp(24px,3vw,34px);color:var(--cream);border:2px solid var(--marigold);border-left-width:8px;background:rgba(245,180,0,.08);box-shadow:6px 6px 0 var(--tomato);transition:background .18s,transform .18s,box-shadow .18s}
 .xp>summary::-webkit-details-marker{display:none}
-.xp>summary::after{content:"+";margin-left:auto;font-family:var(--mono);font-size:30px;line-height:1;color:var(--marigold)}
-.xp[open]>summary::after{content:"\2013"}
-.xp>summary:hover{color:var(--marigold)}
+.xp>summary .hint{margin-left:14px;white-space:nowrap;font-family:var(--mono);font-weight:400;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--marigold)}
+.xp>summary::after{content:"+";flex:none;margin-left:auto;width:32px;height:32px;display:grid;place-items:center;border-radius:50%;background:var(--marigold);color:var(--navy);font-family:var(--mono);font-size:22px;line-height:1;animation:xp-nudge 2.4s ease-in-out 1.2s 3}
+.xp[open]>summary::after{content:"\2013";animation:none}
+.xp[open]>summary .hint{visibility:hidden}
+.xp>summary:hover{color:var(--marigold);background:rgba(245,180,0,.16);transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--tomato)}
+@media (max-width:600px){.xp>summary{font-size:21px;gap:10px}.xp>summary .hint{display:none}}
+@keyframes xp-nudge{0%,70%,100%{transform:scale(1)}80%{transform:scale(1.18)}90%{transform:scale(.95)}}
+@media (prefers-reduced-motion:reduce){.xp>summary::after{animation:none}}
 .xp .deal{grid-template-columns:1fr;gap:26px;margin:8px 0 40px}
 .xp .card{grid-template-columns:220px 1fr;align-items:stretch}
 .xp .card img.photo{height:100%;min-height:200px;aspect-ratio:auto}
@@ -246,6 +251,12 @@ section[id]{scroll-margin-top:0}
 .xp .card p{font-size:15px}
 .xp-list{margin:8px 0 0;padding-left:18px;display:grid;gap:6px;font-size:14.5px;line-height:1.45}
 @media (max-width:700px){.xp .card{grid-template-columns:1fr}.xp .card img.photo{aspect-ratio:16/9;min-height:0}.xp .card .body{border-left:0;border-top:1px solid var(--ink)}}
+@media (max-width:700px){.card img.photo,.card .slot{aspect-ratio:5/2}.xp .card img.photo{aspect-ratio:5/2}.card:nth-child(2n),.card:nth-child(3n){transform:none}}
+@media (max-width:700px){.deal:not(.xp .deal),.posts{display:grid;grid-auto-flow:column;grid-auto-columns:78%;grid-template-columns:none;overflow-x:auto;scroll-snap-type:x mandatory;gap:18px;padding:4px 14px 18px 2px;margin-right:-16px}.deal:not(.xp .deal)>.card,.posts>.card{scroll-snap-align:start}}
+/* rounded corners on cards, panels and portfolio images */
+.card{border-radius:14px;overflow:hidden;align-content:start}
+.ws img,.ws video,.panel{border-radius:14px}
+.loop .card{overflow:visible}.loop .card img.photo{border-radius:8px 8px 0 0}
 </style>
 
 <nav class="toc" aria-label="Sections"><ol><li><a href="#top"><span class="toc-dot"></span><span class="toc-text">Intro</span></a></li><li><a href="#timeline"><span class="toc-dot"></span><span class="toc-text">Career timeline</span></a></li><li><a href="#vantage"><span class="toc-dot"></span><span class="toc-text">Three unique vantage points</span></a></li><li><a href="#capabilities"><span class="toc-dot"></span><span class="toc-text">Capabilities</span></a></li><li><a href="#policy"><span class="toc-dot"></span><span class="toc-text">Policy work</span></a></li><li><a href="#work"><span class="toc-dot"></span><span class="toc-text">R&amp;D Portfolio</span></a></li><li><a href="#loop"><span class="toc-dot"></span><span class="toc-text">The loop</span></a></li><li><a href="#loopnpd"><span class="toc-dot"></span><span class="toc-text">LoopNPD</span></a></li><li><a href="#policy-reformulated"><span class="toc-dot"></span><span class="toc-text">Policy Reformulated</span></a></li><li><a href="#numbers"><span class="toc-dot"></span><span class="toc-text">By the numbers</span></a></li><li><a href="#contact"><span class="toc-dot"></span><span class="toc-text">Contact</span></a></li></ol></nav>
@@ -301,7 +312,7 @@ section[id]{scroll-margin-top:0}
     </figure>
 
     <details class="xp">
-      <summary>More experience details</summary>
+      <summary><span>More experience details<span class="hint">14 roles · click to open</span></span></summary>
       <div class="deal">
       <article class="card c-plum"><img class="photo" src="img/loopnpd.jpg" alt="Gloved hands at a laptop showing the LoopNPD app beside bench samples"><div class="body"><span class="head"><img class="logo" src="img/logo-loopnpd.com.png" alt=""><span class="label">2026 –</span></span><h3><a href="https://loopnpd.com" target="_blank" rel="noopener">Founder, LoopNPD</a></h3><p>Software that puts ingredient sourcing inside the R&amp;D workflow.</p><a class="go" href="https://loopnpd.com" target="_blank" rel="noopener">Launch app →</a><ul class="xp-list"><li>Founded a software company addressing the technical sales support gap at small and mid-sized food companies; the product integrates technical ingredient sales into the R&amp;D process so developers can find ingredient solutions faster</li><li>Own product strategy and roadmap, and write database-driven product specifications translating R&amp;D workflow problems into precise engineering requirements</li><li>Lead marketing, positioning, and sales: brand and messaging, the company website and LinkedIn presence, and direct outreach and discovery with food developers and ingredient suppliers</li></ul></div></article>
       <article class="card c-leaf"><img class="photo" src="img/policyref.jpg" alt="Market crates of strawberries and artichokes"><div class="body"><span class="head"><img class="logo" src="img/logo-substack.com.png" alt=""><span class="label">2026</span></span><h3><a href="https://policyreformulated.substack.com" target="_blank" rel="noopener">Policy Reformulated</a></h3><p>How food policy shapes what gets made and sold. Ultra-processed food definitions, front-of-pack labeling, protein claims.</p><a class="go" href="https://policyreformulated.substack.com" target="_blank" rel="noopener">Read latest →</a><ul class="xp-list"><li>Policy Writer. An ongoing publication on how food policy shapes what gets made and sold, with analysis of the federal ultra-processed food definition, FDA front-of-package labeling, and protein content claims in packaged bread</li></ul></div></article>
@@ -551,22 +562,23 @@ section[id]{scroll-margin-top:0}
   var track=sec.querySelector('.ws-track'); var count=sec.querySelector('.ws-count');
   var cards=[].slice.call(track.querySelectorAll('.ws')); var n=cards.length;
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var narrow=window.matchMedia('(max-width:700px)');
   var lift=[-9,7,-4,10,-8,3,-10,8,-2,6];
   function update(){
     var max=track.scrollWidth-track.clientWidth;
     var idx=max>0?Math.round(track.scrollLeft/max*(n-1))+1:1;
     count.textContent=idx+' / '+n;
-    if(reduce)return;
+    if(reduce||narrow.matches){cards.forEach(function(c){c.style.transform='';c.style.opacity='';c.style.zIndex='';});return;}
     var tr=track.getBoundingClientRect(), mid=tr.left+tr.width/2, half=tr.width/2;
     cards.forEach(function(c,i){
       var r=c.getBoundingClientRect();
       var d=((r.left+r.width/2)-mid)/half;          // -1 left edge, 0 centre, 1 right edge
       var a=Math.max(-1.6,Math.min(1.6,d));
-      var ang=a*24;                                 // turn away like the rim of a flat wheel
-      var depth=-Math.pow(Math.abs(a),1.3)*420;      // recede as it passes
+      var ang=-Math.max(-1,Math.min(1,a))*24;                              // face inward, like the inside of a wheel
+      var depth=-Math.pow(Math.max(0,1-Math.abs(a)),1.3)*420; // arc bows away from the viewer: centre deepest, so smallest
       c.style.transform='translateY('+lift[i%lift.length]+'vh) rotateX(6deg) translateZ('+depth.toFixed(1)+'px) rotateY('+ang.toFixed(1)+'deg)';
       c.style.opacity=(1-Math.min(.55,Math.abs(a)*.35)).toFixed(2);
-      c.style.zIndex=String(100-Math.round(Math.abs(a)*50));
+      c.style.zIndex=String(50+Math.round(Math.abs(a)*50));
     });
   }
   // wheel over the cards glides the wheel sideways; at either end the page scrolls normally
