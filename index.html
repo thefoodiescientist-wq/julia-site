@@ -222,6 +222,8 @@ td:first-child{font-weight:600}
 :focus-visible{outline:3px solid var(--marigold);outline-offset:3px}
 .g-tomato :focus-visible,.panel :focus-visible{outline-color:var(--royal)}
 .contact .wrap{display:grid;gap:22px}
+.contact-grid{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+@media (max-width:700px){.contact-grid{grid-template-columns:1fr}.contact-grid>.blob{justify-self:center;width:200px!important}.contact .sec-title{overflow-wrap:anywhere}}
 .coords{display:flex;flex-wrap:wrap;gap:18px 32px}
 .coords .label{opacity:.9}
 
@@ -234,7 +236,7 @@ section[id]{scroll-margin-top:0}
 .toc-dot{width:8px;height:8px;border:2px solid currentColor;border-radius:50%;flex:none}
 .toc a.active{opacity:1;color:var(--marigold)}
 .toc a.active .toc-dot{background:currentColor}
-@media (max-width:1519px){.toc{padding:12px 10px;left:12px}.toc-text{display:none}.toc:hover .toc-text,.toc:focus-within .toc-text{display:inline}}
+@media (max-width:1799px){.toc{padding:12px 10px;left:12px}.toc-text{display:none}.toc:hover .toc-text,.toc:focus-within .toc-text{display:inline}}
 @media (min-width:761px) and (max-width:1239px){section{padding-left:64px}}
 @media (max-width:760px){.toc{display:none}}
 
@@ -540,7 +542,7 @@ section[id]{scroll-margin-top:0}
 <section class="g-tomato contact" id="contact">
   <div class="wrap">
     <h2 class="sec-title">Connect with <span class="wavy">Julia</span></h2>
-    <div style="display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center">
+    <div class="contact-grid">
       <div style="display:grid;gap:18px">
         <p class="lede">Hiring for food, agriculture or nutrition policy? I would like to hear about it.</p>
         <div style="display:flex;flex-wrap:wrap;gap:18px"><a class="btn" href="https://linkedin.com/in/julia-thompson-19b94a59">Connect with Julia →</a><a class="btn" href="resume.html">View resume →</a></div>
