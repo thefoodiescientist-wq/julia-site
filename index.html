@@ -334,6 +334,12 @@ section[id]{scroll-margin-top:0}
 .sk-head{display:grid;grid-template-columns:1fr 56px 1fr;gap:18px}.sk-head .label+.label{grid-column:3}
 @media (max-width:760px){.sk>li{grid-template-columns:1fr;gap:8px}.sk .arr{transform:rotate(90deg);justify-self:start;margin-left:8px}.sk-head{grid-template-columns:1fr 1fr}.sk-head .label+.label{grid-column:2;text-align:right}}
 .h3-sub{display:block;font-size:.42em;font-family:var(--mono);font-style:normal;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--cream);margin-top:10px}
+.vp-photos{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:30px}
+.vp-photos figure{margin:0;background:var(--cream);padding:8px 8px 10px;box-shadow:8px 8px 0 var(--tomato);border-radius:10px;display:grid;gap:8px}
+.vp-photos figure:nth-child(odd){transform:rotate(-2deg)}.vp-photos figure:nth-child(even){transform:rotate(2deg) translateY(6px)}
+.vp-photos img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;display:block}
+.vp-photos figcaption{color:var(--royal);text-align:center}
+@media (max-width:700px){.vp-photos{grid-template-columns:1fr 1fr;gap:16px}}
 </style>
 <script src="assets/js/clarity.js"></script>
 
@@ -362,6 +368,12 @@ section[id]{scroll-margin-top:0}
   <div class="wrap">
     <h2 class="sec-title">Four unique vantage points, <em>one analyst</em></h2>
     <p class="lede">I know how a rule gets written, and <span class="wavy">how a company will respond to it</span>.</p>
+    <div class="vp-photos" aria-hidden="false">
+      <figure><img src="img/bench-mixer.jpg" alt="Julia mixing a formula in an R&amp;D lab"><figcaption class="label">Food science</figcaption></figure>
+      <figure><img src="img/factory-ppe.jpg" alt="Julia in protective gear on a food processing line"><figcaption class="label">On the plant floor</figcaption></figure>
+      <figure><img src="img/shelf.jpg" alt="Julia beside prepared foods on a store shelf"><figcaption class="label">Commercial</figcaption></figure>
+      <figure><img src="img/lse.jpg" alt="Julia in graduation robes at the London School of Economics"><figcaption class="label">Policy training</figcaption></figure>
+    </div>
     <figure class="panel" style="margin-top:34px">
       <div class="panel-top"><span class="label">What each experience contributes</span></div>
       <div class="vp-m m-only">
