@@ -118,6 +118,7 @@ svg.fig text{font-family:var(--body)}
 .vp-m{gap:10px}
 .vp-m .vp{border:1.5px solid var(--ink);padding:12px 14px;display:grid;gap:4px}
 .vp-m h4{margin:0;font-family:var(--display);font-size:18px}
+.vp-logos{display:inline-flex;gap:6px;vertical-align:middle;margin-left:6px}.vp-logos img{width:18px;height:18px;object-fit:contain}
 .vp-m p{margin:0;font-style:italic;font-size:15px}
 .vp-m .vp .label{font-size:10.5px;font-weight:500}
 .vp-m svg{width:28px;height:36px;justify-self:center}
@@ -306,10 +307,34 @@ section[id]{scroll-margin-top:0}
 .card{border-radius:14px;overflow:hidden;align-content:start}
 .ws img,.ws video,.panel{border-radius:14px}
 .loop .card{overflow:visible}.loop .card img.photo{border-radius:8px 8px 0 0}
+
+/* translation key */
+.tx{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.tx>li{display:grid;grid-template-columns:230px 1fr 250px;gap:22px;padding:18px 0;border-bottom:1px solid rgba(4,22,52,.3);align-items:start}
+.tx>li:first-child{padding-top:0}.tx>li:last-child{border-bottom:0;padding-bottom:0}
+.tx h3{font-size:22px;line-height:1.1}
+.tx .label{color:var(--royal);display:block;margin-top:6px;font-size:10.5px}
+.tx ul{margin:0;padding-left:18px;display:grid;gap:4px;font-size:15px;line-height:1.4}
+.tx .so{font-family:var(--display);font-style:italic;font-weight:700;font-size:17px;line-height:1.25;color:var(--plum);border-left:4px solid var(--tomato);padding-left:12px}
+.tx .ask{font-style:italic;font-size:14.5px;line-height:1.35;color:var(--royal);margin:0 0 8px}
+.tx-head{display:grid;grid-template-columns:230px 1fr 250px;gap:22px}
+@media (max-width:860px){.tx>li{grid-template-columns:1fr;gap:10px}.tx-head{grid-template-columns:1fr}.tx-head .label+.label{display:none}}
+/* why a food scientist: skill -> benefit */
+.sk{list-style:none;margin:0;padding:0;display:grid}
+.sk>li{display:grid;grid-template-columns:1fr 56px 1fr;gap:18px;align-items:center;padding:16px 0;border-bottom:1px solid rgba(4,22,52,.3)}
+.sk>li:first-child{padding-top:0}.sk>li:last-child{border-bottom:0;padding-bottom:0}
+.sk h3{font-size:21px;line-height:1.15}
+.sk .from p{font-size:14px;opacity:.8;margin-top:4px}
+.sk .arr{width:48px;height:24px;justify-self:center}
+.sk .arr path{fill:none;stroke:var(--tomato);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}
+.sk .to{font-family:var(--display);font-style:italic;font-weight:700;font-size:18px;line-height:1.3;color:var(--plum);background:rgba(245,180,0,.22);border-left:4px solid var(--marigold);padding:10px 14px}
+.sk-head{display:grid;grid-template-columns:1fr 56px 1fr;gap:18px}.sk-head .label+.label{grid-column:3}
+@media (max-width:760px){.sk>li{grid-template-columns:1fr;gap:8px}.sk .arr{transform:rotate(90deg);justify-self:start;margin-left:8px}.sk-head{grid-template-columns:1fr 1fr}.sk-head .label+.label{grid-column:2;text-align:right}}
+.h3-sub{display:block;font-size:.42em;font-family:var(--mono);font-style:normal;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--cream);margin-top:10px}
 </style>
 <script src="assets/js/clarity.js"></script>
 
-<nav class="toc" aria-label="Sections"><ol><li><a href="#top"><span class="toc-dot"></span><span class="toc-text">Intro</span></a></li><li><a href="#timeline"><span class="toc-dot"></span><span class="toc-text">Career timeline</span></a></li><li><a href="#vantage"><span class="toc-dot"></span><span class="toc-text">Three unique vantage points</span></a></li><li><a href="#capabilities"><span class="toc-dot"></span><span class="toc-text">Capabilities</span></a></li><li><a href="#policy"><span class="toc-dot"></span><span class="toc-text">Policy work</span></a></li><li><a href="#work"><span class="toc-dot"></span><span class="toc-text">R&amp;D Portfolio</span></a></li><li><a href="#loop"><span class="toc-dot"></span><span class="toc-text">The loop</span></a></li><li><a href="#loopnpd"><span class="toc-dot"></span><span class="toc-text">LoopNPD</span></a></li><li><a href="#policy-reformulated"><span class="toc-dot"></span><span class="toc-text">Policy Reformulated</span></a></li><li><a href="#numbers"><span class="toc-dot"></span><span class="toc-text">By the numbers</span></a></li><li><a href="#contact"><span class="toc-dot"></span><span class="toc-text">Contact</span></a></li></ol></nav>
+<nav class="toc" aria-label="Sections"><ol><li><a href="#top"><span class="toc-dot"></span><span class="toc-text">Intro</span></a></li><li><a href="#vantage"><span class="toc-dot"></span><span class="toc-text">Four unique vantage points</span></a></li><li><a href="#translate"><span class="toc-dot"></span><span class="toc-text">Policy capabilities</span></a></li><li><a href="#why-food-science"><span class="toc-dot"></span><span class="toc-text">Why a food scientist</span></a></li><li><a href="#capabilities"><span class="toc-dot"></span><span class="toc-text">Where each capability was proven</span></a></li><li><a href="#policy"><span class="toc-dot"></span><span class="toc-text">Policy work</span></a></li><li><a href="#policy-reformulated"><span class="toc-dot"></span><span class="toc-text">Policy Reformulated Substack</span></a></li><li><a href="#loopnpd"><span class="toc-dot"></span><span class="toc-text">LoopNPD Software</span></a></li><li><a href="#numbers"><span class="toc-dot"></span><span class="toc-text">By the numbers</span></a></li><li><a href="#timeline"><span class="toc-dot"></span><span class="toc-text">Career timeline</span></a></li><li><a href="#work"><span class="toc-dot"></span><span class="toc-text">R&amp;D Portfolio</span></a></li><li><a href="#contact"><span class="toc-dot"></span><span class="toc-text">Contact</span></a></li></ol></nav>
 <!-- HERO -->
 <section class="hero g-royal dots" id="top">
   <div class="wrap">
@@ -329,8 +354,244 @@ section[id]{scroll-margin-top:0}
 </section>
 <div class="fringe" aria-hidden="true"></div>
 
-<!-- TIMELINE + CARDS · navy -->
-<section class="g-navy" id="timeline">
+<!-- CONVERGENCE · navy -->
+<section class="g-navy" id="vantage">
+  <div class="wrap">
+    <h2 class="sec-title">Four unique vantage points, <em>one analyst</em></h2>
+    <p class="lede">I know how a rule gets written, and <span class="wavy">how a company will respond to it</span>.</p>
+    <figure class="panel" style="margin-top:34px">
+      <div class="panel-top"><span class="label">What each experience contributes</span></div>
+      <div class="vp-m m-only">
+        <div class="vp"><h4>Food science</h4><p>how a product actually gets made</p><span class="label">BS, UMass Amherst · Formulation · process optimization · labeling · stage-gate R&amp;D</span></div>
+        <div class="vp"><h4>Commercial experience <span class="vp-logos"><img src="img/logo-amazon.com.png" alt="Amazon"><img src="img/logo-kerry.com.png" alt="Kerry"><img src="img/logo-highlinerfoods.com.png" alt="High Liner Foods"></span></h4><p>how a business weighs cost, margin and risk</p><span class="label">RFPs · $2M savings · category sales analysis &amp; strategy</span></div>
+        <div class="vp"><h4>City government <span class="vp-logos"><img src="img/logo-seattle.gov.png" alt="City of Seattle"></span></h4><p>how a rule gets written and passed</p><span class="label">Appointed commissioner · council work plan</span></div>
+        <div class="vp"><h4>Policy training</h4><p>how to analyze a rule and its trade-offs</p><span class="label">Executive MPA, LSE · 2026 · six policy papers</span></div>
+        <svg viewBox="0 0 28 36" aria-hidden="true"><path d="M14 2 L14 30 M5 22 L14 33 L23 22" fill="none" stroke="#E8291C" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="out"><h4>Policy analysis that predicts the industry response</h4></div>
+      </div>
+      <div class="scroll d-only">
+      <svg class="fig" viewBox="0 0 900 392" role="img" aria-label="Food science (BS, UMass Amherst), commercial experience (Amazon, Kerry, High Liner Foods), city government (City of Seattle) and policy training (Executive MPA, LSE) each feed into one outcome: policy analysis that predicts the industry response." style="min-width:640px">
+        <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#E8291C"/></marker></defs>
+        <g fill="#F2EDE3" stroke="#041634" stroke-width="1.5">
+          <rect x="20" y="20" width="330" height="78"/><rect x="20" y="111" width="330" height="78"/><rect x="20" y="202" width="330" height="78"/><rect x="20" y="293" width="330" height="78"/>
+        </g>
+        <image href="img/logo-umass.png" x="202" y="31" width="22" height="18"/>
+        <image href="img/logo-amazon.com.png" x="276" y="121" width="18" height="18"/><image href="img/logo-kerry.com.png" x="298" y="121" width="18" height="18"/><image href="img/logo-highlinerfoods.com.png" x="320" y="121" width="18" height="18"/>
+        <image href="img/logo-seattle.gov.png" x="320" y="212" width="18" height="18"/>
+        <image href="img/lse-logo.svg" x="183" y="306" width="16" height="16"/>
+        <rect x="608" y="154" width="280" height="84" fill="#E8291C"/>
+        <rect x="600" y="146" width="280" height="84" fill="#F5B400" stroke="#041634" stroke-width="1.5"/>
+        <g font-size="15" font-weight="700" fill="#041634" font-family="Playfair Display,serif">
+          <text x="34" y="44">Food science</text><text x="34" y="135">Commercial experience</text><text x="34" y="226">City government</text><text x="34" y="317">Policy training</text>
+          <text x="620" y="184">Policy analysis that predicts</text><text x="620" y="204">the industry response</text>
+        </g>
+        <g font-size="12" fill="#041634" font-style="italic">
+          <text x="34" y="64">how a product actually gets made</text>
+          <text x="34" y="155">how a business weighs cost, margin and risk</text>
+          <text x="34" y="246">how a rule gets written and passed</text>
+          <text x="34" y="337">how to analyze a rule and its trade-offs</text>
+        </g>
+        <g font-size="10" fill="#041634" class="mono">
+          <text x="34" y="84">FORMULATION · PROCESS OPTIMIZATION · LABELING · R&amp;D</text>
+          <text x="336" y="44" text-anchor="end">BS, UMASS AMHERST</text>
+          <text x="34" y="175">RFPS · $2M SAVINGS · CATEGORY SALES ANALYSIS &amp; STRATEGY</text>
+          <text x="34" y="266">APPOINTED COMMISSIONER · COUNCIL WORK PLAN</text>
+          <text x="336" y="317" text-anchor="end">EXECUTIVE MPA, LSE · 2026</text>
+          <text x="34" y="357">SIX POLICY PAPERS · PUBLIC COMMENT TO FDA</text>
+        </g>
+        <g stroke="#E8291C" stroke-width="3" fill="none" stroke-linecap="round" marker-end="url(#arr)">
+          <path d="M350 59 C 480 59, 480 188, 596 188"/><path d="M350 150 C 470 150, 470 188, 596 188"/><path d="M350 241 C 470 241, 470 188, 596 188"/><path d="M350 332 C 480 332, 480 188, 596 188"/>
+        </g>
+      </svg>
+      </div>
+    </figure>
+  </div>
+</section>
+<div class="fringe" aria-hidden="true"></div>
+
+<!-- POLICY CAPABILITIES · royal -->
+<section class="g-royal" id="translate">
+  <div class="wrap">
+    <h2 class="sec-title">Policy <em>Capabilities</em></h2>
+    <div class="panel" style="margin-top:34px">
+      <div class="panel-top tx-head"><span class="label">Policy skill</span><span class="label">What I did</span><span class="label">What it means for your team</span></div>
+      <ol class="tx">
+        <li><div><h3>Stakeholder engagement</h3></div>
+          <div><p class="ask">Managing external stakeholders</p><ul><li>Managed outside relationships in every role: clients at CuliNex, Kerry and its customers at KerrySelect, where we ran inside sales for Kerry, co-manufacturers where I launched complex processes, and suppliers through RFPs that secured about $2M (19%) in annual savings</li><li>At Amazon, interviewed and worked with partner teams in in-stock, regulatory and operations to redesign internal processes, fixing unit-of-measure errors and preventing more than $1.1M in reported shrink in 2025, including $375K in two weeks on a single item</li><li>Worked with four research and promotion boards: U.S. Highbush Blueberry Council, American Egg Board, Potatoes USA and the Maine Lobster Marketing Collaborative</li><li>For each, published research for product developers, created marketing assets, presented at international conferences and ran sampling programs for U.S. agricultural goods abroad</li><li>Built the Blueberry Council&rsquo;s international program from scratch: contributed to 50 new products in India and a children&rsquo;s nutritional supplement in Asia</li></ul></div>
+          <p class="so">I build working relationships with every outside party a decision touches, from growers&rsquo; boards to suppliers.</p></li>
+        <li><div><h3>Policy analysis</h3></div>
+          <div><p class="ask">High-quality policy analysis</p><ul><li>Executive MPA, LSE, 2026</li><li>Graduate papers: front-of-pack labeling, SNAP, meat consolidation, farm labor, development</li><li>Policy Reformulated: gained followers from USDA, FDA, non-profits and industry</li></ul></div>
+          <p class="so">I turn technical evidence into a recommendation a decision-maker can use.</p></li>
+        <li><div><h3>Written and verbal communication</h3></div>
+          <div><p class="ask">Translate complex policy, research, and technical information</p><ul><li>Primary technical contact for food manufacturers across North America</li><li>Company spokesperson at webinars and conferences, including Asia Fruit Logistica in Bangkok</li><li>Turned federal regulation into guidance R&amp;D and marketing teams could act on</li><li>Wrote HACCP plans, GMP policies and staff training for six warehouses to reach FSMA compliance</li></ul></div>
+          <p class="so">I explain a requirement in plain language to the business that has to meet it.</p></li>
+        <li><div><h3>Regulatory policy</h3></div>
+          <div><p class="ask">Read, analyze, and interpret legal, policy, and scientific documents</p><ul><li>Wrote FDA, USDA and Canadian labels; held the title Regulatory Specialist at High Liner Foods</li><li>Interpreted 21 CFR and the EU novel food rules to bring products into compliance</li><li>Submitted child nutrition products to USDA for approval</li><li>Tracked new rules and turned them into product changes: GMO disclosure, FSMA, Prop 65, USDA child nutrition standards</li><li>Track live FDA and USDA rules in Policy Reformulated: front-of-pack labeling, ultra-processed food definitions, protein claims</li></ul></div>
+          <p class="so">I read a rule the way the people who must follow it will.</p></li>
+        <li><div><h3>Policy advocacy</h3></div>
+          <div><p class="ask">Develop and update high-quality written advocacy materials, including regulatory comments</p><ul><li>Filed public comment on FDA&rsquo;s GRAS proposed rule, Docket FDA-2025-N-3262, arguing from industry experience that no one in the supply chain verifies long-term ingredient safety</li><li>Publish positions on live food rules in Policy Reformulated, followed by readers at USDA, FDA, non-profits and industry</li><li>Advised the Mayor, Council and city departments as a Seattle Disability Commissioner</li></ul></div>
+          <p class="so">I make the case for a position, in writing and on the record.</p></li>
+        <li><div><h3>Constituent engagement</h3></div>
+          <div><p class="ask">Working with constituents and stakeholders</p><ul><li>Appointed by the Mayor and Council as one of 21 commissioners advising on equitable policy and legislation</li><li>Liaison between residents and city departments; worked with King County agencies across jurisdictions</li><li>Co-authored the annual work plan Council legislates against</li></ul></div>
+          <p class="so">I&rsquo;ve worked inside a public body, with residents and agencies.</p></li>
+        <li><div><h3>Collaborative problem-solving</h3></div>
+          <div><p class="ask">Comfortable engaging in thoughtful dialogue, constructive disagreement, and collaborative problem-solving</p><ul><li>Served as the central point of contact between R&amp;D, marketing, regulatory, sales and processing, the hub every department worked through to keep projects moving</li><li>Presented to business leaders to show why one department needed another to change, then negotiated a solution that worked for all</li><li>Ran RFPs that balanced cost and timeline for the business, quality for R&amp;D, sales appeal for marketing, and U.S. regulations and company governance for regulatory</li><li>Got marketing, manufacturing, sales and leadership to agree a clean label line also had to be more nutritious</li><li>Led sourcing for six major product resets on a 50% shorter timeline</li></ul></div>
+          <p class="so">When needs don&rsquo;t line up, I find the option everyone can sign onto.</p></li>
+        <li><div><h3>Program evaluation</h3></div>
+          <div><p class="ask">Policy and program evaluation</p><ul><li>Founded the Expanded Access Program: nearly $50,000 in pro bono services to BIPOC food entrepreneurs in year one, renewed for a second</li><li>Evaluated programs against baselines and outcome indicators; found one too weak to change behavior and recommended the proven model</li></ul></div>
+          <p class="so">I design a program, measure it, and say plainly when it isn&rsquo;t working.</p></li>
+        <li><div><h3>Quantitative and qualitative analysis</h3></div>
+          <div><p class="ask">Identifies needs or challenges proactively</p><ul><li>Traced one data error through costing, product blocking and financial reporting; led four functions to close a $1.4M discrepancy at net zero impact</li></ul></div>
+          <p class="so">I find where a good plan goes wrong on the ground.</p></li>
+        <li><div><h3>Food safety</h3></div>
+          <div><p class="ask">Foodborne illness traceability</p><ul><li>Audited 202 products against FDA, USDA and state food safety requirements and led remediation to full compliance</li><li>Co-wrote the supplier qualification standard the category ran on</li><li>Managed two recall responses</li></ul></div>
+          <p class="so">I know what a standard costs the regulated party, and where compliance breaks.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+<div class="fringe" aria-hidden="true"></div>
+
+<!-- WHY A FOOD SCIENTIST · tomato -->
+<section class="g-tomato" id="why-food-science">
+  <div class="wrap">
+    <h2 class="sec-title">Why a policy team needs a <span class="wavy">food scientist</span></h2>
+    <p class="lede">I know what a rule does to a real product, and how industry will respond.</p>
+    <div class="panel" style="margin-top:34px">
+      <div class="panel-top sk-head"><span class="label">What I&rsquo;ve done</span><span class="label">What it lets your team do</span></div>
+      <ol class="sk">
+      <li><div class="from"><h3>Responded to the GMO labeling law</h3><p>Bioengineered food disclosure on real products</p></div><svg class="arr" viewBox="0 0 48 24" aria-hidden="true"><path d="M2 12 H42 M32 3 L44 12 L32 21"/></svg><p class="to">Predict whether a disclosure rule changes the label, the formula or the supplier.</p></li>
+      <li><div class="from"><h3>Implemented FSMA on the ground</h3><p>HACCP plans, GMP policies and training for six warehouses</p></div><svg class="arr" viewBox="0 0 48 24" aria-hidden="true"><path d="M2 12 H42 M32 3 L44 12 L32 21"/></svg><p class="to">Know what a federal food safety rule asks of a facility, and where it stalls.</p></li>
+      <li><div class="from"><h3>Removed caramel color for Prop 65</h3><p>Reformulated to avoid a California warning label</p></div><svg class="arr" viewBox="0 0 48 24" aria-hidden="true"><path d="M2 12 H42 M32 3 L44 12 L32 21"/></svg><p class="to">Show how one state&rsquo;s rule reformulates products for the whole country.</p></li>
+      <li><div class="from"><h3>Designed products to earn claims</h3><p>Keto, high fiber, seed-oil free, allergen free, USDA child nutrition</p></div><svg class="arr" viewBox="0 0 48 24" aria-hidden="true"><path d="M2 12 H42 M32 3 L44 12 L32 21"/></svg><p class="to">Anticipate how industry will engineer to meet any new definition, from &ldquo;healthy&rdquo; to ultra-processed.</p></li>
+      <li><div class="from"><h3>Swapped ingredients without changing the label</h3><p>Daily substitutions that had to stay inside the rules</p></div><svg class="arr" viewBox="0 0 48 24" aria-hidden="true"><path d="M2 12 H42 M32 3 L44 12 L32 21"/></svg><p class="to">Find the edge of a rule before industry does.</p></li>
+      <li><div class="from"><h3>Read a formula for what the label hides</h3><p>Protein quality, fortification, clean label</p></div><svg class="arr" viewBox="0 0 48 24" aria-hidden="true"><path d="M2 12 H42 M32 3 L44 12 L32 21"/></svg><p class="to">Catch claims that are legal but misleading, and rules that strip nutrition by accident.</p></li>
+      <li><div class="from"><h3>Worked with GRAS ingredients</h3><p>Saw what suppliers, regulatory teams and customers did and didn&rsquo;t check</p></div><svg class="arr" viewBox="0 0 48 24" aria-hidden="true"><path d="M2 12 H42 M32 3 L44 12 L32 21"/></svg><p class="to">Point to gaps in ingredient safety oversight; I filed comment on FDA&rsquo;s GRAS rule in 2026.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+<div class="fringe" aria-hidden="true"></div>
+
+<!-- CAPABILITY GRID · navy -->
+<section class="g-navy" id="capabilities">
+  <div class="wrap">
+    <h2 class="sec-title">Where each capability was <em>proven</em></h2>
+    <p class="lede">Seven capabilities, three settings.</p>
+    <div class="panel" style="margin-top:34px">
+      <div class="panel-top"><span class="label">Capability by setting</span><span class="key"><span><i class="dot"></i> Led it there</span><span><i class="dot half"></i> Contributed</span><span><i class="dot none"></i> Not claimed</span></span></div>
+      <div class="scroll">
+      <table>
+        <thead><tr><th>Capability</th><th class="c">Bench</th><th class="c">Retail scale</th><th class="c">Government</th><th>Evidence</th></tr></thead>
+        <tbody>
+          <tr><td>Regulatory analysis (FDA, USDA)</td><td class="c" data-label="Bench"><i class="dot"></i></td><td class="c" data-label="Retail"><i class="dot"></i></td><td class="c" data-label="Government"><i class="dot"></i></td><td>Labels at High Liner; compliance lifecycle at Amazon; labeling policy research at LSE</td></tr>
+          <tr><td>Cost and trade-off analysis</td><td class="c" data-label="Bench"><i class="dot"></i></td><td class="c" data-label="Retail"><i class="dot"></i></td><td class="c" data-label="Government"><i class="dot half"></i></td><td>$50K ingredient optimization; $2M sourcing shift; SNAP adequacy research</td></tr>
+          <tr><td>Supply chain impact analysis</td><td class="c" data-label="Bench"><i class="dot half"></i></td><td class="c" data-label="Retail"><i class="dot"></i></td><td class="c" data-label="Government"></td><td>Supplier qualification criteria; two recall responses</td></tr>
+          <tr><td>Stakeholder engagement</td><td class="c" data-label="Bench"><i class="dot"></i></td><td class="c" data-label="Retail"><i class="dot"></i></td><td class="c" data-label="Government"><i class="dot"></i></td><td>Blueberry Council international program; cross-functional remediation; Commission work plan</td></tr>
+          <tr><td>Program design</td><td class="c" data-label="Bench"><i class="dot"></i></td><td class="c" data-label="Retail"><i class="dot half"></i></td><td class="c" data-label="Government"><i class="dot"></i></td><td>Expanded Access Program; team restructure proposal; SNAP nutrition platform proposal</td></tr>
+          <tr><td>Data analysis and automation</td><td class="c" data-label="Bench"><i class="dot"></i></td><td class="c" data-label="Retail"><i class="dot"></i></td><td class="c" data-label="Government"><i class="dot half"></i></td><td>Trial design, sensory and shelf-life data at every bench; Python and AI tools at Amazon; 49 legacy defects cleared; elasticity modeling</td></tr>
+          <tr><td>Technical research authorship</td><td class="c" data-label="Bench"><i class="dot"></i></td><td class="c" data-label="Retail"><i class="dot"></i></td><td class="c" data-label="Government"><i class="dot"></i></td><td>11-method blueberry study; policy papers on labeling and meat consolidation</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="fringe" aria-hidden="true"></div>
+
+<!-- POLICY WORK · plum -->
+<section class="g-plum" id="policy">
+  <div class="wrap">
+    <h2 class="sec-title">Policy <em>work</em></h2>
+    <p class="lede">Rules I've worked under, programs I've built, markets I've opened.</p>
+    <div class="deal clamp">
+      <article class="card c-forest"><span class="badge">1 of 21<small>commissioners</small></span><img class="photo" src="img/seattle.jpg" alt=""><div class="body"><span class="head"><span class="label">Civic</span></span><h3><a href="https://www.seattle.gov/seattle-disability-commission/who-we-are" target="_blank" rel="noopener">Annual Commission work plan</a></h3><p>One of 21 commissioners appointed by the Mayor and Council. Co-authored the work plan that sets the priorities Council legislates against: transportation equity, accessible infrastructure, emergency preparedness, ADA compliance.</p><span class="label" style="opacity:.7">Seattle Disability Commission · 2025–26</span><a class="go" href="https://www.seattle.gov/seattle-disability-commission/who-we-are" target="_blank" rel="noopener">Open →</a></div></article>
+      <article class="card c-tomato"><span class="badge">202<small>products in compliance</small></span><img class="photo" src="img/pol-regulatory.jpg" alt=""><div class="body"><span class="head"><span class="label">Regulatory</span></span><h3>FDA and USDA regulatory work</h3><p>Built retail and foodservice labels, ingredient statements and allergen declarations. Managed compliance across the product lifecycle at Amazon, led supplier food safety audits across 202 products and two recall responses.</p><span class="label" style="opacity:.7">High Liner Foods, Amazon Fresh · 2017–26</span></div></article>
+      <article class="card c-leaf"><span class="badge">$50K<small>pro bono, year one</small></span><img class="photo" src="img/eap.jpg" alt=""><div class="body"><span class="head"><span class="label">Program design</span></span><h3><a href="https://culinex.biz" target="_blank" rel="noopener">Expanded Access Program</a></h3><p>Designed and launched a pro bono development program for BIPOC food entrepreneurs: nearly $50,000 in services in year one, renewed for a second year.</p><span class="label" style="opacity:.7">CuliNEX · 2020–22</span><a class="go" href="https://culinex.biz" target="_blank" rel="noopener">Open →</a></div></article>
+      <article class="card c-marigold"><span class="badge">SNAP<small>policy proposal</small></span><img class="photo" src="img/pol-snap.jpg" alt=""><div class="body"><span class="head"><span class="label">Policy proposal</span></span><h3>Nutrition guidance platform for SNAP households</h3><p>A proposal engaging SNAP benefit structures, SNAP-Ed, GusNIP, EFNEP and USDA SBIR/STTR funding, with regulatory risk assessed across FDA, HIPAA and CMS food-as-medicine frameworks.</p><span class="label" style="opacity:.7">2026</span></div></article>
+      <article class="card c-royal"><span class="badge">50<small>products in India</small></span><img class="photo" src="img/pol-blueberry.jpg" alt=""><div class="body"><span class="head"><span class="label">Agricultural trade</span></span><h3><a href="docs/ushbc-ingredient-comparison-2023.pdf" target="_blank" rel="noopener">Taking U.S. blueberries overseas</a></h3><p>Built and ran the Council’s international samples and technical communications program from scratch, connecting global manufacturers with U.S. blueberry ingredient suppliers. Contributed to 50 new products in India and a children’s supplement in Asia. Presented at Asia Fruit Logistica, Bangkok.</p><span class="label" style="opacity:.7">U.S. Highbush Blueberry Council · 2021–23</span><a class="go" href="docs/ushbc-ingredient-comparison-2023.pdf" target="_blank" rel="noopener">Open →</a></div></article>
+    </div>
+    <div class="eyebrow" style="margin-top:64px"><span class="label">Graduate research</span><span class="rule"></span><span class="label">Six papers · LSE Executive MPA</span></div>
+    <h3 class="sec-title" style="font-size:clamp(28px,4vw,40px)">What I <em>studied</em></h3>
+    <p class="lede">Six papers. Tap one to open the PDF.</p>
+    <div class="deal clamp">
+      <article class="card c-tomato"><img class="photo" src="img/essay-econ.jpg" alt="First page of the essay"><div class="body"><span class="head"><span class="label">Nutrition labeling</span></span><h3><a href="docs/essay-econ.pdf" target="_blank" rel="noopener">Front-of-package labels as a market failure</a></h3><p>Economic policy analysis of asymmetric information between manufacturers and shoppers, and what labeling rules can and cannot fix.</p><span class="label" style="opacity:.7">LSE · April 2025</span><a class="go" href="docs/essay-econ.pdf" target="_blank" rel="noopener">Read the paper →</a></div></article>
+      <article class="card c-tomato"><img class="photo" src="img/essay-fop.jpg" alt="First page of the essay"><div class="body"><span class="head"><span class="label">Nutrition labeling</span></span><h3><a href="docs/essay-fop.pdf" target="_blank" rel="noopener">Who wins the labeling fight</a></h3><p>Politicians, bureaucrats and interest groups in the FDA front-of-pack rule, and whose preferences become policy.</p><span class="label" style="opacity:.7">LSE · November 2024</span><a class="go" href="docs/essay-fop.pdf" target="_blank" rel="noopener">Read the paper →</a></div></article>
+      <article class="card c-marigold"><img class="photo" src="img/essay-snap.jpg" alt="First page of the essay"><div class="body"><span class="head"><span class="label">SNAP adequacy</span></span><h3><a href="docs/essay-snap.pdf" target="_blank" rel="noopener">SNAP and the Healthy SNAP Act</a></h3><p>Empirical methods applied to benefit adequacy and the proposal to restrict what SNAP can buy.</p><span class="label" style="opacity:.7">LSE · January 2025</span><a class="go" href="docs/essay-snap.pdf" target="_blank" rel="noopener">Read the paper →</a></div></article>
+      <article class="card c-plum"><img class="photo" src="img/essay-meat.jpg" alt="First page of the essay"><div class="body"><span class="head"><span class="label">Meat consolidation</span></span><h3><a href="docs/essay-meat.pdf" target="_blank" rel="noopener">Why policy problems persist</a></h3><p>A century of price-fixing cases against meat processors and why regulation keeps failing to stick.</p><span class="label" style="opacity:.7">LSE · 2024</span><a class="go" href="docs/essay-meat.pdf" target="_blank" rel="noopener">Read the paper →</a></div></article>
+      <article class="card c-leaf"><img class="photo" src="img/essay-citizenship.jpg" alt="First page of the essay"><div class="body"><span class="head"><span class="label">H-2A agricultural labor</span></span><h3><a href="docs/essay-citizenship.pdf" target="_blank" rel="noopener">A citizenship path for farmworkers</a></h3><p>Policy proposal for the non-citizen workforce that harvests the American food supply.</p><span class="label" style="opacity:.7">LSE · May 2025</span><a class="go" href="docs/essay-citizenship.pdf" target="_blank" rel="noopener">Read the paper →</a></div></article>
+      <article class="card c-royal"><img class="photo" src="img/essay-devecon.jpg" alt="First page of the essay"><div class="body"><span class="head"><span class="label">Development economics</span></span><h3><a href="docs/essay-devecon.pdf" target="_blank" rel="noopener">Food manufacturing as an economic ladder</a></h3><p>Can advanced food manufacturing still drive structural change in developing economies?</p><span class="label" style="opacity:.7">LSE · 2025</span><a class="go" href="docs/essay-devecon.pdf" target="_blank" rel="noopener">Read the paper →</a></div></article>
+    </div>
+  </div>
+</section>
+<div class="fringe" aria-hidden="true"></div>
+
+<!-- POLICY REFORMULATED · royal -->
+<section class="g-royal" id="policy-reformulated">
+  <div class="wrap">
+    <h2 class="sec-title">What I'm <em>writing</em></h2>
+    <div class="product">
+      <div class="copy">
+        <span class="tag"><img class="logo" src="img/logo-substack.com.png" alt="">Policy Reformulated · 2026</span>
+        <h3>Policy Reformulated <span class="h3-sub">Substack</span></h3>
+        <p class="lede">Each essay takes a live food rule and follows it to the shelf.</p>
+        <ul class="skim"><li><i></i>Ultra-processed food</li><li><i></i>Front-of-pack labels</li><li><i></i>Protein claims</li></ul>
+        <div><a class="btn" href="https://policyreformulated.substack.com" target="_blank" rel="noopener">Read latest →</a></div>
+      </div>
+      <div class="shot"><img src="img/pr-upf.jpg" alt="Diagram from the ultra-processed food essay: whole ingredients split into fractions sold as other ingredients or destroyed during processing"></div>
+    </div>
+    <div class="posts">
+      <a class="card" href="https://policyreformulated.substack.com/p/imported-beef-is-the-wrong-outrage" target="_blank" rel="noopener"><img class="photo" src="img/pr-protein.jpg" alt=""><div class="body"><span class="date">Sep 2026</span><h3>Imported Beef Is the Wrong Outrage</h3><p>Trimmings are 2% of the supply. The slavery, the child labor and the ten listeria deaths are what nobody gets punished for.</p></div></a>
+      <a class="card" href="https://policyreformulated.substack.com/p/defining-ultra-processed-foods-for" target="_blank" rel="noopener"><img class="photo" src="img/pr-upf.jpg" alt=""><div class="body"><span class="date">Aug 2026</span><h3>Defining Ultra-Processed Foods for a Nutritious Outcome</h3><p>The government is defining ultra-processed food right now. The definition decides whether we get a more nutritious nation.</p></div></a>
+      <a class="card" href="https://policyreformulated.substack.com/p/bread-part-2-maha-is-affecting-the" target="_blank" rel="noopener"><img class="photo" src="img/pr-bread.jpg" alt=""><div class="body"><span class="date">Aug 2026</span><h3>Bread part 2: MAHA Is Affecting the Wrong Things</h3><p>A movement that wants healthier food is monitoring what goes in, not how the food ends up.</p></div></a>
+      <a class="card" href="https://policyreformulated.substack.com/p/the-new-fda-front-of-pack-nutritional" target="_blank" rel="noopener"><img class="photo" src="img/pr-fop.jpg" alt="" style="object-fit:contain;background:#fff"><div class="body"><span class="date">Aug 2026</span><h3>The New FDA Front-of-Pack Labels Will Not Improve Anything</h3><p>An economic policy analysis of front-of-package schemes and consumer outcomes.</p></div></a>
+      <a class="card" href="https://policyreformulated.substack.com/p/half-the-protein-all-the-credit" target="_blank" rel="noopener"><img class="photo" src="img/pr-welcome.jpg" alt=""><div class="body"><span class="date">Aug 2026</span><h3>Half the Protein, All the Credit</h3><p>A loaf can advertise 22 grams of protein and legally deliver less than half. How the trick works and the fix that would stop it.</p></div></a>
+    </div>
+  </div>
+</section>
+<div class="fringe" aria-hidden="true"></div>
+
+<!-- LOOPNPD · plum -->
+<section class="g-plum" id="loopnpd">
+  <div class="wrap">
+    <h2 class="sec-title">What I'm <span class="wavy">building</span></h2>
+    <div class="product">
+      <div class="copy">
+        <span class="tag"><img class="logo" src="img/logo-loopnpd.com.png" alt="">Founder · 2026 –</span>
+        <h3>LoopNPD <span class="h3-sub">Software</span></h3>
+        <p class="lede">Food R&amp;D software with Millie, an AI co-pilot that suggests your next experiment.</p>
+        <details class="more"><summary>Why I built it</summary><p>The food R&amp;D platform that learns your science as you build it: formulation management, stage-gate tracking, nutrition and labeling tools, and a supplier directory.</p><p>Built from the problem I lived for twelve years: developers find ingredient solutions slowly because technical sales support sits outside the R&amp;D process. LoopNPD puts it inside.</p></details>
+        <div class="chips"><span class="chip">Stage-gate</span><span class="chip">Formulation management</span><span class="chip">Nutrition facts</span><span class="chip">Technical data sheets</span><span class="chip">Triangle tests</span><span class="chip">Ingredient marketplace</span><span class="chip">Millie AI</span></div>
+        <div><a class="btn" href="https://loopnpd.com" target="_blank" rel="noopener">Launch app →</a></div>
+      </div>
+      <div class="shot">
+        <video src="vid/millie-technical.mp4" poster="vid/millie-technical-poster.jpg" width="1920" height="1080" controls playsinline preload="metadata" aria-label="Three-minute captioned walkthrough of LoopNPD: formulas, lab tests, sensory panels, stage gates, ingredients and suppliers in one connected app, with Millie, the AI co-pilot"></video>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="fringe" aria-hidden="true"></div>
+
+<!-- NUMBERS · tomato -->
+<section class="g-tomato" id="numbers">
+  <div class="wrap">
+    <h2 class="sec-title">By the <span class="wavy">numbers</span></h2>
+    <div style="margin-top:34px">
+      <div class="stats" style="margin-top:0">
+        <div class="stat"><span class="label">Industry</span><b>12 yrs</b><span>bench to sourcing desk</span></div>
+        <div class="stat"><span class="label">Amazon Fresh</span><b>$2M</b><span>annual savings, about 19%</span></div>
+        <div class="stat"><span class="label">Food safety</span><b>202</b><span>products brought into compliance</span></div>
+        <div class="stat"><span class="label">CuliNEX</span><b>30+</b><span>products as technical lead</span></div>
+        <div class="stat"><span class="label">City government</span><b>1 of 21</b><span>commissioners, city of 800,000</span></div>
+        <div class="stat"><span class="label">Pro bono</span><b>$50K</b><span>development for BIPOC founders</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="fringe" aria-hidden="true"></div>
+
+<!-- TIMELINE + CARDS · royal -->
+<section class="g-royal" id="timeline">
   <div class="wrap">
     <h2 class="sec-title">Twelve years in <em>six lanes</em></h2>
     <p class="lede">Policy training stacked on top of a decade in industry, not swapped in for it.</p>
@@ -394,7 +655,7 @@ section[id]{scroll-margin-top:0}
       <article class="card c-royal"><img class="photo" src="img/lse.jpg" alt="Julia throwing her graduation cap beside giant LSE letters and a sunflower"><div class="body"><span class="head"><img class="logo" src="img/lse-logo.svg" alt=""><span class="label">2024 – 26</span></span><h3><a href="https://www.lse.ac.uk/school-of-public-policy/executive-mpa" target="_blank" rel="noopener">Executive Master of Public Administration</a></h3><p>London School of Economics. Economics-based policy analysis, applied to food systems.</p><ul class="xp-list"><li>Executive Master of Public Administration, London School of Economics and Political Science</li><li>Concentration in economics-based policy analysis, applied to food systems governance, nutrition labeling regulation, SNAP benefit adequacy, H-2A agricultural labor, and meat industry consolidation</li></ul></div></article>
       <article class="card c-tile"><img class="photo" src="img/amazon-pm.jpg" alt="Julia on a production floor in a white coat, hairnet and mask"><div class="body"><span class="head"><img class="logo" src="img/logo-amazon.com.png" alt=""><span class="label">2024 – 25</span></span><h3><a href="https://www.amazon.com/fresh" target="_blank" rel="noopener">Product Developer, Prepared Meals, Amazon Fresh</a></h3><p>Regulatory compliance across the product lifecycle; proposed the stage-gate restructure of the culinary team.</p><ul class="xp-list"><li>Managed regulatory compliance across the product development lifecycle against FDA, USDA, and state food safety requirements</li><li>Authored a proposal to restructure the culinary development team, diagnosing duplicated work and undefined handoffs and designing a stage-gate process, formalized documentation standards, and a redefined continuous-improvement food scientist role, projected to double team output</li></ul></div></article>
       <article class="card c-tile"><img class="photo" src="img/work-ushbc.jpg" alt="Julia in a blue blazer presenting blueberry ingredients for the U.S. Highbush Blueberry Council"><div class="body"><span class="head"><img class="logo" src="img/logo-kerry.com.png" alt=""><span class="label">2023 – 24</span></span><h3><a href="https://www.kerryselect.com" target="_blank" rel="noopener">Technical Product Manager, KerrySelect</a></h3><p>Three-person team; escalation point for North American food manufacturers.</p><ul class="xp-list"><li>Supervised a three-person team and acted as primary technical point of contact for escalated R&amp;D issues across North American food manufacturer clients, advising on product selection and troubleshooting</li></ul></div></article>
-      <article class="card c-marigold"><img class="photo" src="img/culinex.jpg" alt="CuliNEX team gathered around a benchtop of blueberry samples"><div class="body"><span class="head"><img class="logo" src="img/logo-culinex.biz.png" alt=""><span class="label">2020 – 23</span></span><h3><a href="https://culinex.biz" target="_blank" rel="noopener">Food Scientist III, CuliNEX</a></h3><p>30+ products, plant-based authority, Blueberry Council research lead.</p><ul class="xp-list"><li>Guided project teams of two to three scientists across 30-plus products, designing the experiments, reviewing outputs, and redirecting programs when results warranted; supervised one direct report</li><li>Served as the company's technical authority on plant-based formulation, consulting across teams on ingredient functionality problems that had stalled their projects</li><li>Technical research lead: authored a comparative study of 11 blueberry processing methods for the U.S. Highbush Blueberry Council, assessing nutritional impact (anthocyanins, fiber, vitamin C) alongside sensory profile, functional performance, and cost; presented findings to manufacturers in the US and internationally, including Asia Fruit Logistica in Bangkok</li><li>Established and managed the Council's international samples and technical communications program from scratch for a new client, building the team and running every function, connecting global manufacturers with ingredient suppliers and contributing to 50 new products launched in India and a children's nutritional supplement in Malaysia</li></ul></div></article>
+      <article class="card c-marigold"><img class="photo" src="img/culinex.jpg" alt="CuliNEX team gathered around a benchtop of blueberry samples"><div class="body"><span class="head"><img class="logo" src="img/logo-culinex.biz.png" alt=""><span class="label">2020 – 23</span></span><h3><a href="https://culinex.biz" target="_blank" rel="noopener">Food Scientist III, CuliNEX</a></h3><p>30+ products, plant-based authority, Blueberry Council research lead.</p><ul class="xp-list"><li>Guided project teams of two to three scientists across 30-plus products, designing the experiments, reviewing outputs, and redirecting programs when results warranted; supervised one direct report</li><li>Served as the company's technical authority on plant-based formulation, consulting across teams on ingredient functionality problems that had stalled their projects</li><li>Technical research lead: authored a comparative study of 11 blueberry processing methods for the U.S. Highbush Blueberry Council, assessing nutritional impact (anthocyanins, fiber, vitamin C) alongside sensory profile, functional performance, and cost; presented findings to manufacturers in the US and internationally, including Asia Fruit Logistica in Bangkok</li><li>Established and managed the Council's international samples and technical communications program from scratch for a new client, building the team and running every function, connecting global manufacturers with ingredient suppliers and contributing to 50 new products launched in India and a children's nutritional supplement in Asia</li></ul></div></article>
       <article class="card c-leaf"><img class="photo" src="img/eap.jpg" alt="Entrepreneurs gathered around a tasting counter"><div class="body"><span class="head"><img class="logo" src="img/logo-culinex.biz.png" alt=""><span class="label">2020 – 22</span></span><h3><a href="https://culinex.biz" target="_blank" rel="noopener">Expanded Access Program</a></h3><p>Designed and launched a pro bono program: nearly $50K in development services for BIPOC founders in year one, renewed for a second year.</p><ul class="xp-list"><li>Designed and launched the Expanded Access Program, delivering nearly $50,000 in pro bono food development services to BIPOC entrepreneurs in year one; program renewed into a second year</li></ul></div></article>
       <article class="card c-marigold"><img class="photo" src="img/kettle.jpg" alt="A ladle of chowder from a steam kettle"><div class="body"><span class="head"><img class="logo" src="img/logo-kettlecuisine.com.png" alt=""><span class="label">2019 – 20</span></span><h3><a href="https://www.kettlecuisine.com" target="_blank" rel="noopener">Process Technologist, Kettle Cuisine</a></h3><p>Food safety and quality systems at manufacturing scale; launches across R&amp;D, operations and quality.</p><ul class="xp-list"><li>Managed food safety and quality systems for large-scale manufacturing and coordinated product launches across R&amp;D, operations, and quality teams</li></ul></div></article>
       <article class="card c-marigold"><img class="photo" src="img/salmon.jpg" alt="A raw salmon portion held in tongs at the bench"><div class="body"><span class="head"><img class="logo" src="img/logo-highlinerfoods.com.png" alt=""><span class="label">2017 – 19</span></span><h3><a href="https://www.highlinerfoods.com" target="_blank" rel="noopener">Food Technologist and Regulatory Specialist, High Liner Foods</a></h3><p>Clean-label Sea Cuisine line for Walmart and Kroger, plus child nutrition products. FDA and USDA labels, $50K ingredient savings.</p><ul class="xp-list"><li>Created FDA and USDA-compliant labels for retail and foodservice products, reviewing ingredient statements, allergen declarations, and nutrition facts panels</li><li>Led new product development for Walmart and Kroger and saved more than $50,000 annually through ingredient optimization; built a stage-gate R&amp;D process from scratch</li></ul></div></article>
@@ -403,106 +664,6 @@ section[id]{scroll-margin-top:0}
       <article class="card c-royal"><img class="photo" src="img/umass.jpg" alt="Julia in cap and gown holding a Food Science sign"><div class="body"><span class="head"><img class="logo wide" src="img/logo-umass.png" alt=""><span class="label">2011 – 15</span></span><h3><a href="https://www.umass.edu/food-science/" target="_blank" rel="noopener">BS Food Science, UMass Amherst</a></h3><p>Team captain, Developing Solutions for Developing Countries.</p><ul class="xp-list"><li>Team Captain, Developing Solutions for Developing Countries (2014-2015). Developed Maisha Kitamu, a $0.30 shelf-stable product for East Africa using locally harvested insects and sweet potatoes, delivering more than 50 percent RDA for vitamin A, zinc, iron, iodine, and B12 on refurbished processing technology appropriate to the region</li></ul></div></article>
     </div>
     </details>
-  </div>
-</section>
-<div class="fringe" aria-hidden="true"></div>
-
-<!-- CONVERGENCE · royal -->
-<section class="g-royal" id="vantage">
-  <div class="wrap">
-    <h2 class="sec-title">Three unique vantage points, <em>one analyst</em></h2>
-    <p class="lede">I know how a rule gets written, and <span class="wavy">how a company will respond to it</span>.</p>
-    <figure class="panel" style="margin-top:34px">
-      <div class="panel-top"><span class="label">What each experience contributes</span></div>
-      <div class="vp-m m-only">
-        <div class="vp"><h4>The bench</h4><p>how a product actually gets made</p><span class="label">Formulation · labeling · stage-gate R&amp;D</span></div>
-        <div class="vp"><h4>National retail business</h4><p>how a business weighs cost, margin and risk</p><span class="label">RFPs · $2M savings · P&amp;L · supplier audits · 202 SKUs</span></div>
-        <div class="vp"><h4>City government</h4><p>how a rule gets written and passed</p><span class="label">Appointed commissioner · council work plan</span></div>
-        <svg viewBox="0 0 28 36" aria-hidden="true"><path d="M14 2 L14 30 M5 22 L14 33 L23 22" fill="none" stroke="#E8291C" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <div class="out"><h4>Policy analysis that predicts the industry response</h4><span class="label">Executive MPA, LSE · 2026</span></div>
-      </div>
-      <div class="scroll d-only">
-      <svg class="fig" viewBox="0 0 900 300" role="img" aria-label="Bench formulation, national retail sourcing and city government each feed into one outcome: policy analysis that predicts the industry response." style="min-width:640px">
-        <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#E8291C"/></marker></defs>
-        <g fill="#F2EDE3" stroke="#041634" stroke-width="1.5">
-          <rect x="20" y="20" width="330" height="78"/><rect x="20" y="111" width="330" height="78"/><rect x="20" y="202" width="330" height="78"/>
-        </g>
-        <rect x="608" y="108" width="280" height="100" fill="#E8291C"/>
-        <rect x="600" y="100" width="280" height="100" fill="#F5B400" stroke="#041634" stroke-width="1.5"/><image href="img/lse-logo.svg" x="620" y="170" width="24" height="24"/>
-        <g font-size="15" font-weight="700" fill="#041634" font-family="Playfair Display,serif">
-          <text x="34" y="44">The bench</text><text x="34" y="135">National retail business</text><text x="34" y="226">City government</text>
-          <text x="620" y="138">Policy analysis that predicts</text><text x="620" y="158">the industry response</text>
-        </g>
-        <g font-size="12" fill="#041634" font-style="italic">
-          <text x="34" y="64">how a product actually gets made</text>
-          <text x="34" y="155">how a business weighs cost, margin and risk</text>
-          <text x="34" y="246">how a rule gets written and passed</text>
-        </g>
-        <g font-size="10" fill="#041634" class="mono">
-          <text x="34" y="84">FORMULATION · LABELING · STAGE-GATE R&amp;D</text>
-          <text x="34" y="175">RFPS · $2M SAVINGS · P&amp;L · SUPPLIER AUDITS · 202 SKUS</text>
-          <text x="34" y="266">APPOINTED COMMISSIONER · COUNCIL WORK PLAN</text>
-          <text x="650" y="181">EXECUTIVE MPA, LSE</text><text x="650" y="194">2026</text>
-        </g>
-        <g stroke="#E8291C" stroke-width="3" fill="none" stroke-linecap="round" marker-end="url(#arr)">
-          <path d="M350 59 C 480 59, 480 150, 596 150"/><path d="M350 150 L 596 150"/><path d="M350 241 C 480 241, 480 150, 596 150"/>
-        </g>
-      </svg>
-      </div>
-    </figure>
-  </div>
-</section>
-<div class="fringe" aria-hidden="true"></div>
-
-<!-- CAPABILITY GRID · navy -->
-<section class="g-navy" id="capabilities">
-  <div class="wrap">
-    <h2 class="sec-title">Where each capability was <em>proven</em></h2>
-    <p class="lede">Seven capabilities, three settings.</p>
-    <div class="panel" style="margin-top:34px">
-      <div class="panel-top"><span class="label">Capability by setting</span><span class="key"><span><i class="dot"></i> Led it there</span><span><i class="dot half"></i> Contributed</span><span><i class="dot none"></i> Not claimed</span></span></div>
-      <div class="scroll">
-      <table>
-        <thead><tr><th>Capability</th><th class="c">Bench</th><th class="c">Retail scale</th><th class="c">Government</th><th>Evidence</th></tr></thead>
-        <tbody>
-          <tr><td>Regulatory analysis (FDA, USDA)</td><td class="c" data-label="Bench"><i class="dot"></i></td><td class="c" data-label="Retail"><i class="dot"></i></td><td class="c" data-label="Government"><i class="dot"></i></td><td>Labels at High Liner; compliance lifecycle at Amazon; labeling policy research at LSE</td></tr>
-          <tr><td>Cost and trade-off analysis</td><td class="c" data-label="Bench"><i class="dot"></i></td><td class="c" data-label="Retail"><i class="dot"></i></td><td class="c" data-label="Government"><i class="dot half"></i></td><td>$50K ingredient optimization; $2M sourcing shift; SNAP adequacy research</td></tr>
-          <tr><td>Supply chain impact analysis</td><td class="c" data-label="Bench"><i class="dot half"></i></td><td class="c" data-label="Retail"><i class="dot"></i></td><td class="c" data-label="Government"></td><td>Supplier qualification criteria; two recall responses</td></tr>
-          <tr><td>Stakeholder engagement</td><td class="c" data-label="Bench"><i class="dot"></i></td><td class="c" data-label="Retail"><i class="dot"></i></td><td class="c" data-label="Government"><i class="dot"></i></td><td>Blueberry Council international program; cross-functional remediation; Commission work plan</td></tr>
-          <tr><td>Program design</td><td class="c" data-label="Bench"><i class="dot"></i></td><td class="c" data-label="Retail"><i class="dot half"></i></td><td class="c" data-label="Government"><i class="dot"></i></td><td>Expanded Access Program; team restructure proposal; SNAP nutrition platform proposal</td></tr>
-          <tr><td>Data analysis and automation</td><td class="c" data-label="Bench"><i class="dot"></i></td><td class="c" data-label="Retail"><i class="dot"></i></td><td class="c" data-label="Government"><i class="dot half"></i></td><td>Trial design, sensory and shelf-life data at every bench; Python and AI tools at Amazon; 49 legacy defects cleared; elasticity modeling</td></tr>
-          <tr><td>Technical research authorship</td><td class="c" data-label="Bench"><i class="dot"></i></td><td class="c" data-label="Retail"><i class="dot"></i></td><td class="c" data-label="Government"><i class="dot"></i></td><td>11-method blueberry study; policy papers on labeling and meat consolidation</td></tr>
-        </tbody>
-      </table>
-      </div>
-    </div>
-  </div>
-</section>
-<div class="fringe" aria-hidden="true"></div>
-
-<!-- POLICY WORK · plum -->
-<section class="g-plum" id="policy">
-  <div class="wrap">
-    <h2 class="sec-title">Policy <em>work</em></h2>
-    <p class="lede">Rules I've worked under, programs I've built, markets I've opened.</p>
-    <div class="deal clamp">
-      <article class="card c-forest"><span class="badge">1 of 21<small>commissioners</small></span><img class="photo" src="img/seattle.jpg" alt=""><div class="body"><span class="head"><span class="label">Civic</span></span><h3><a href="https://www.seattle.gov/seattle-disability-commission/who-we-are" target="_blank" rel="noopener">Annual Commission work plan</a></h3><p>One of 21 commissioners appointed by the Mayor and Council. Co-authored the work plan that sets the priorities Council legislates against: transportation equity, accessible infrastructure, emergency preparedness, ADA compliance.</p><span class="label" style="opacity:.7">Seattle Disability Commission · 2025–26</span><a class="go" href="https://www.seattle.gov/seattle-disability-commission/who-we-are" target="_blank" rel="noopener">Open →</a></div></article>
-      <article class="card c-tomato"><span class="badge">202<small>products in compliance</small></span><img class="photo" src="img/pol-regulatory.jpg" alt=""><div class="body"><span class="head"><span class="label">Regulatory</span></span><h3>FDA and USDA regulatory work</h3><p>Built retail and foodservice labels, ingredient statements and allergen declarations. Managed compliance across the product lifecycle at Amazon, led supplier food safety audits across 202 products and two recall responses.</p><span class="label" style="opacity:.7">High Liner Foods, Amazon Fresh · 2017–26</span></div></article>
-      <article class="card c-leaf"><span class="badge">$50K<small>pro bono, year one</small></span><img class="photo" src="img/eap.jpg" alt=""><div class="body"><span class="head"><span class="label">Program design</span></span><h3><a href="https://culinex.biz" target="_blank" rel="noopener">Expanded Access Program</a></h3><p>Designed and launched a pro bono development program for BIPOC food entrepreneurs: nearly $50,000 in services in year one, renewed for a second year.</p><span class="label" style="opacity:.7">CuliNEX · 2020–22</span><a class="go" href="https://culinex.biz" target="_blank" rel="noopener">Open →</a></div></article>
-      <article class="card c-marigold"><span class="badge">SNAP<small>policy proposal</small></span><img class="photo" src="img/pol-snap.jpg" alt=""><div class="body"><span class="head"><span class="label">Policy proposal</span></span><h3>Nutrition guidance platform for SNAP households</h3><p>A proposal engaging SNAP benefit structures, SNAP-Ed, GusNIP, EFNEP and USDA SBIR/STTR funding, with regulatory risk assessed across FDA, HIPAA and CMS food-as-medicine frameworks.</p><span class="label" style="opacity:.7">2026</span></div></article>
-      <article class="card c-royal"><span class="badge">50<small>products in India</small></span><img class="photo" src="img/pol-blueberry.jpg" alt=""><div class="body"><span class="head"><span class="label">Agricultural trade</span></span><h3><a href="docs/ushbc-ingredient-comparison-2023.pdf" target="_blank" rel="noopener">Taking U.S. blueberries overseas</a></h3><p>Built and ran the Council’s international samples and technical communications program from scratch, connecting global manufacturers with U.S. blueberry ingredient suppliers. Contributed to 50 new products in India and a children’s supplement in Malaysia. Presented at Asia Fruit Logistica, Bangkok.</p><span class="label" style="opacity:.7">U.S. Highbush Blueberry Council · 2021–23</span><a class="go" href="docs/ushbc-ingredient-comparison-2023.pdf" target="_blank" rel="noopener">Open →</a></div></article>
-    </div>
-    <div class="eyebrow" style="margin-top:64px"><span class="label">Graduate research</span><span class="rule"></span><span class="label">Six papers · LSE Executive MPA</span></div>
-    <h3 class="sec-title" style="font-size:clamp(28px,4vw,40px)">What I <em>studied</em></h3>
-    <p class="lede">Six papers. Tap one to open the PDF.</p>
-    <div class="deal clamp">
-      <article class="card c-tomato"><img class="photo" src="img/essay-econ.jpg" alt="First page of the essay"><div class="body"><span class="head"><span class="label">Nutrition labeling</span></span><h3><a href="docs/essay-econ.pdf" target="_blank" rel="noopener">Front-of-package labels as a market failure</a></h3><p>Economic policy analysis of asymmetric information between manufacturers and shoppers, and what labeling rules can and cannot fix.</p><span class="label" style="opacity:.7">LSE · April 2025</span><a class="go" href="docs/essay-econ.pdf" target="_blank" rel="noopener">Read the paper →</a></div></article>
-      <article class="card c-tomato"><img class="photo" src="img/essay-fop.jpg" alt="First page of the essay"><div class="body"><span class="head"><span class="label">Nutrition labeling</span></span><h3><a href="docs/essay-fop.pdf" target="_blank" rel="noopener">Who wins the labeling fight</a></h3><p>Politicians, bureaucrats and interest groups in the FDA front-of-pack rule, and whose preferences become policy.</p><span class="label" style="opacity:.7">LSE · November 2024</span><a class="go" href="docs/essay-fop.pdf" target="_blank" rel="noopener">Read the paper →</a></div></article>
-      <article class="card c-marigold"><img class="photo" src="img/essay-snap.jpg" alt="First page of the essay"><div class="body"><span class="head"><span class="label">SNAP adequacy</span></span><h3><a href="docs/essay-snap.pdf" target="_blank" rel="noopener">SNAP and the Healthy SNAP Act</a></h3><p>Empirical methods applied to benefit adequacy and the proposal to restrict what SNAP can buy.</p><span class="label" style="opacity:.7">LSE · January 2025</span><a class="go" href="docs/essay-snap.pdf" target="_blank" rel="noopener">Read the paper →</a></div></article>
-      <article class="card c-plum"><img class="photo" src="img/essay-meat.jpg" alt="First page of the essay"><div class="body"><span class="head"><span class="label">Meat consolidation</span></span><h3><a href="docs/essay-meat.pdf" target="_blank" rel="noopener">Why policy problems persist</a></h3><p>A century of price-fixing cases against meat processors and why regulation keeps failing to stick.</p><span class="label" style="opacity:.7">LSE · 2024</span><a class="go" href="docs/essay-meat.pdf" target="_blank" rel="noopener">Read the paper →</a></div></article>
-      <article class="card c-leaf"><img class="photo" src="img/essay-citizenship.jpg" alt="First page of the essay"><div class="body"><span class="head"><span class="label">H-2A agricultural labor</span></span><h3><a href="docs/essay-citizenship.pdf" target="_blank" rel="noopener">A citizenship path for farmworkers</a></h3><p>Policy proposal for the non-citizen workforce that harvests the American food supply.</p><span class="label" style="opacity:.7">LSE · May 2025</span><a class="go" href="docs/essay-citizenship.pdf" target="_blank" rel="noopener">Read the paper →</a></div></article>
-      <article class="card c-royal"><img class="photo" src="img/essay-devecon.jpg" alt="First page of the essay"><div class="body"><span class="head"><span class="label">Development economics</span></span><h3><a href="docs/essay-devecon.pdf" target="_blank" rel="noopener">Food manufacturing as an economic ladder</a></h3><p>Can advanced food manufacturing still drive structural change in developing economies?</p><span class="label" style="opacity:.7">LSE · 2025</span><a class="go" href="docs/essay-devecon.pdf" target="_blank" rel="noopener">Read the paper →</a></div></article>
-    </div>
   </div>
 </section>
 <div class="fringe" aria-hidden="true"></div>
@@ -529,85 +690,6 @@ section[id]{scroll-margin-top:0}
   </div>
 </section>
 <div class="fringe" aria-hidden="true"></div>
-
-<!-- THE LOOP · royal -->
-<section class="g-royal" id="loop">
-  <div class="wrap">
-    <h2 class="sec-title">The loop I have worked <em>every stage</em> of</h2>
-    <p class="lede">Most policy analysts have sat in one of these boxes. I've sat in all four.</p>
-    <div class="loop">
-      <article class="card c-marigold"><svg class="arrow" viewBox="0 0 44 30" aria-hidden="true"><path d="M2 15 C 14 10, 26 20, 40 15 M31 7 L41 15 L31 23" fill="none" stroke="#E8291C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg><img class="photo" src="img/lse-group.jpg" alt="LSE executive cohort in graduation gowns"><div class="body"><span class="stage">Commissioner · policy research</span><span class="stage-n">1</span><h3>Rule is written</h3><p>FDA, USDA, City Council</p></div></article>
-      <article class="card c-marigold"><svg class="arrow" viewBox="0 0 44 30" aria-hidden="true"><path d="M2 15 C 14 10, 26 20, 40 15 M31 7 L41 15 L31 23" fill="none" stroke="#E8291C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg><img class="photo" src="img/bench-mixer.jpg" alt="Julia in a lab coat pouring into a stand mixer"><div class="body"><span class="stage">Food scientist · regulatory specialist</span><span class="stage-n">2</span><h3>Company responds</h3><p>Reformulate, re-source, relabel</p></div></article>
-      <article class="card c-marigold"><svg class="arrow" viewBox="0 0 44 30" aria-hidden="true"><path d="M2 15 C 14 10, 26 20, 40 15 M31 7 L41 15 L31 23" fill="none" stroke="#E8291C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg><img class="photo" src="img/shelf.jpg" alt="Julia grinning in front of a freezer case stocked with Sea Cuisine products she developed"><div class="body"><span class="stage">Product developer · sourcing manager</span><span class="stage-n">3</span><h3>Product on shelf</h3><p>Retail buyer, supplier audit</p></div></article>
-      <article class="card c-marigold"><img class="photo" src="img/board.jpg" alt="A wooden board of bread, cucumbers, tomatoes and olives"><div class="body"><span class="stage">Policy Reformulated</span><span class="stage-n">4</span><h3>Consumer outcome</h3><p>Nutrition, price, access</p></div></article>
-    </div>
-    <div class="loop-back"><svg viewBox="0 0 120 40" aria-hidden="true"><path d="M115 20 C 90 5, 60 35, 5 20 M14 12 L4 20 L14 28" fill="none" stroke="#F5B400" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="label">evidence feeds the next rule</span></div>
-  </div>
-</section>
-
-<!-- LOOPNPD · tomato -->
-<section class="g-tomato" id="loopnpd">
-  <div class="wrap">
-    <h2 class="sec-title">What I'm <span class="wavy">building</span></h2>
-    <div class="product">
-      <div class="copy">
-        <span class="tag"><img class="logo" src="img/logo-loopnpd.com.png" alt="">Founder · 2026 –</span>
-        <h3>LoopNPD</h3>
-        <p class="lede">Food R&amp;D software with Millie, an AI co-pilot that suggests your next experiment.</p>
-        <details class="more"><summary>Why I built it</summary><p>The food R&amp;D platform that learns your science as you build it: formulation management, stage-gate tracking, nutrition and labeling tools, and a supplier directory.</p><p>Built from the problem I lived for twelve years: developers find ingredient solutions slowly because technical sales support sits outside the R&amp;D process. LoopNPD puts it inside.</p></details>
-        <div class="chips"><span class="chip">Stage-gate</span><span class="chip">Formulation management</span><span class="chip">Nutrition facts</span><span class="chip">Technical data sheets</span><span class="chip">Triangle tests</span><span class="chip">Ingredient marketplace</span><span class="chip">Millie AI</span></div>
-        <div><a class="btn" href="https://loopnpd.com" target="_blank" rel="noopener">Launch app →</a></div>
-      </div>
-      <div class="shot">
-        <video src="vid/millie-technical.mp4" poster="vid/millie-technical-poster.jpg" width="1920" height="1080" controls playsinline preload="metadata" aria-label="Three-minute captioned walkthrough of LoopNPD: formulas, lab tests, sensory panels, stage gates, ingredients and suppliers in one connected app, with Millie, the AI co-pilot"></video>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- POLICY REFORMULATED · plum -->
-<section class="g-plum" id="policy-reformulated">
-  <div class="wrap">
-    <h2 class="sec-title">What I'm <em>writing</em></h2>
-    <div class="product">
-      <div class="copy">
-        <span class="tag"><img class="logo" src="img/logo-substack.com.png" alt="">Policy Reformulated · 2026</span>
-        <h3>Policy Reformulated</h3>
-        <p class="lede">Each essay takes a live food rule and follows it to the shelf.</p>
-        <ul class="skim"><li><i></i>Ultra-processed food</li><li><i></i>Front-of-pack labels</li><li><i></i>Protein claims</li></ul>
-        <div><a class="btn" href="https://policyreformulated.substack.com" target="_blank" rel="noopener">Read latest →</a></div>
-      </div>
-      <div class="shot"><img src="img/pr-upf.jpg" alt="Diagram from the ultra-processed food essay: whole ingredients split into fractions sold as other ingredients or destroyed during processing"></div>
-    </div>
-    <div class="posts">
-      <a class="card" href="https://policyreformulated.substack.com/p/imported-beef-is-the-wrong-outrage" target="_blank" rel="noopener"><img class="photo" src="img/pr-protein.jpg" alt=""><div class="body"><span class="date">Sep 2026</span><h3>Imported Beef Is the Wrong Outrage</h3><p>Trimmings are 2% of the supply. The slavery, the child labor and the ten listeria deaths are what nobody gets punished for.</p></div></a>
-      <a class="card" href="https://policyreformulated.substack.com/p/defining-ultra-processed-foods-for" target="_blank" rel="noopener"><img class="photo" src="img/pr-upf.jpg" alt=""><div class="body"><span class="date">Aug 2026</span><h3>Defining Ultra-Processed Foods for a Nutritious Outcome</h3><p>The government is defining ultra-processed food right now. The definition decides whether we get a more nutritious nation.</p></div></a>
-      <a class="card" href="https://policyreformulated.substack.com/p/bread-part-2-maha-is-affecting-the" target="_blank" rel="noopener"><img class="photo" src="img/pr-bread.jpg" alt=""><div class="body"><span class="date">Aug 2026</span><h3>Bread part 2: MAHA Is Affecting the Wrong Things</h3><p>A movement that wants healthier food is monitoring what goes in, not how the food ends up.</p></div></a>
-      <a class="card" href="https://policyreformulated.substack.com/p/the-new-fda-front-of-pack-nutritional" target="_blank" rel="noopener"><img class="photo" src="img/pr-fop.jpg" alt="" style="object-fit:contain;background:#fff"><div class="body"><span class="date">Aug 2026</span><h3>The New FDA Front-of-Pack Labels Will Not Improve Anything</h3><p>An economic policy analysis of front-of-package schemes and consumer outcomes.</p></div></a>
-      <a class="card" href="https://policyreformulated.substack.com/p/half-the-protein-all-the-credit" target="_blank" rel="noopener"><img class="photo" src="img/pr-welcome.jpg" alt=""><div class="body"><span class="date">Aug 2026</span><h3>Half the Protein, All the Credit</h3><p>A loaf can advertise 22 grams of protein and legally deliver less than half. How the trick works and the fix that would stop it.</p></div></a>
-    </div>
-  </div>
-</section>
-<div class="fringe" aria-hidden="true"></div>
-
-
-
-<!-- NUMBERS · tomato -->
-<section class="g-tomato" id="numbers">
-  <div class="wrap">
-    <h2 class="sec-title">By the <span class="wavy">numbers</span></h2>
-    <div style="margin-top:34px">
-      <div class="stats" style="margin-top:0">
-        <div class="stat"><span class="label">Industry</span><b>12 yrs</b><span>bench to sourcing desk</span></div>
-        <div class="stat"><span class="label">Amazon Fresh</span><b>$2M</b><span>annual savings, about 19%</span></div>
-        <div class="stat"><span class="label">Food safety</span><b>202</b><span>products brought into compliance</span></div>
-        <div class="stat"><span class="label">CuliNEX</span><b>30+</b><span>products as technical lead</span></div>
-        <div class="stat"><span class="label">City government</span><b>1 of 21</b><span>commissioners, city of 800,000</span></div>
-        <div class="stat"><span class="label">Pro bono</span><b>$50K</b><span>development for BIPOC founders</span></div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- CONTACT · tomato -->
 <section class="g-tomato contact" id="contact">
